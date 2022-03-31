@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>act.retrievals.cbh &mdash; Atmospheric data Community Toolkit 0.post1+g07c747f documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/plot_directive.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/sg_gallery.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/sg_gallery-binder.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/sg_gallery-dataframe.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/sg_gallery-rendered-html.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/clipboard.min.js"></script>
+        <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> Atmospheric data Community Toolkit
+          </a>
+              <div class="version">
+                0.post1+g07c747f
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../CREATING_ENVIRONMENTS.html">Setting up an Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../CONTRIBUTING.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../source/auto_examples/index.html">ACT Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../API/index.html">API Reference Manual</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Downloads</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://anaconda.org/conda-forge/act-atmos/files">Anaconda Cloud</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/ARM-DOE/ACT">GitHub Repository</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/ARM-DOE/ACT/archive/master.zip">Zip File of Repository</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Help</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/ARM-DOE/ACT/issues">GitHub Issue Tracker</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Atmospheric data Community Toolkit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+      <li>act.retrievals.cbh</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for act.retrievals.cbh</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Functions for calculated cloud base height that are instrument agnostic.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">ndimage</span>
+
+
+<div class="viewcode-block" id="generic_sobel_cbh"><a class="viewcode-back" href="../../../API/generated/act.retrievals.generic_sobel_cbh.html#act.retrievals.generic_sobel_cbh">[docs]</a><span class="k">def</span> <span class="nf">generic_sobel_cbh</span><span class="p">(</span>
+    <span class="n">obj</span><span class="p">,</span>
+    <span class="n">variable</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">height_dim</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">var_thresh</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">fill_na</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">return_thresh</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Function for calculating cloud base height from lidar/radar data</span>
+<span class="sd">    using a basic sobel filter and thresholding. Note, this was not</span>
+<span class="sd">    initially based on any published work, but a lit review indicates</span>
+<span class="sd">    that there have been similar methods employed to detect boundary</span>
+<span class="sd">    layer heights.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    obj : ACT Object</span>
+<span class="sd">        ACT object where data are stored.</span>
+<span class="sd">    variable : string</span>
+<span class="sd">        Variable on which to process.</span>
+<span class="sd">    height_dim : string</span>
+<span class="sd">        Height variable to use for CBH values.</span>
+<span class="sd">    var_thresh : float</span>
+<span class="sd">        Thresholding for variable if needed.</span>
+<span class="sd">    fill_na : float</span>
+<span class="sd">        What to fill nans with in DataArray if any.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    new_obj : ACT Object</span>
+<span class="sd">        ACT Object with cbh values included as variable.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    In testing on the ARM KAZR and MPL data, the following methods</span>
+<span class="sd">    tended to work best for thresholding/corrections/etc.</span>
+
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        kazr = act.retrievals.cbh.generic_sobel_cbh(</span>
+<span class="sd">            kazr, variable=&quot;reflectivity_copol&quot;, height_dim=&quot;range&quot;, var_thresh=-10.0</span>
+<span class="sd">        )</span>
+
+<span class="sd">        mpl = act.corrections.mpl.correct_mpl(mpl)</span>
+<span class="sd">        mpl.range_bins.values = mpl.height.values[0, :] * 1000.0</span>
+<span class="sd">        mpl.range_bins.attrs[&quot;units&quot;] = &quot;m&quot;</span>
+<span class="sd">        mpl[&quot;signal_return_co_pol&quot;].values[:, 0:10] = 0.0</span>
+<span class="sd">        mpl = act.retrievals.cbh.generic_sobel_cbh(</span>
+<span class="sd">            mpl,</span>
+<span class="sd">            variable=&quot;signal_return_co_pol&quot;,</span>
+<span class="sd">            height_dim=&quot;range_bins&quot;,</span>
+<span class="sd">            var_thresh=10.0,</span>
+<span class="sd">            fill_na=0.0,</span>
+<span class="sd">        )</span>
+
+<span class="sd">        ceil = act.retrievals.cbh.generic_sobel_cbh(</span>
+<span class="sd">            ceil,</span>
+<span class="sd">            variable=&quot;backscatter&quot;,</span>
+<span class="sd">            height_dim=&quot;range&quot;,</span>
+<span class="sd">            var_thresh=1000.0,</span>
+<span class="sd">            fill_na=0,</span>
+<span class="sd">        )</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">variable</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span>
+    <span class="k">if</span> <span class="n">fill_na</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">fill_na</span> <span class="o">=</span> <span class="n">var_thresh</span>
+
+    <span class="c1"># Pull data into Standalone DataArray</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">obj</span><span class="p">[</span><span class="n">variable</span><span class="p">]</span>
+
+    <span class="c1"># Apply thresholds if set</span>
+    <span class="k">if</span> <span class="n">var_thresh</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">values</span> <span class="o">&gt;</span> <span class="n">var_thresh</span><span class="p">)</span>
+
+    <span class="c1"># Fill with fill_na values</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">fill_na</span><span class="p">)</span>
+
+    <span class="c1"># If return_thresh is True, replace variable data with</span>
+    <span class="c1"># thresholded data</span>
+    <span class="k">if</span> <span class="n">return_thresh</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">obj</span><span class="p">[</span><span class="n">variable</span><span class="p">]</span><span class="o">.</span><span class="n">values</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">values</span>
+
+    <span class="c1"># Apply Sobel filter to data and smooth the results</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">values</span>
+    <span class="n">edge</span> <span class="o">=</span> <span class="n">ndimage</span><span class="o">.</span><span class="n">sobel</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">edge</span> <span class="o">=</span> <span class="n">ndimage</span><span class="o">.</span><span class="n">uniform_filter</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Create Data Array</span>
+    <span class="n">edge_obj</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">dims</span><span class="o">=</span><span class="n">obj</span><span class="p">[</span><span class="n">variable</span><span class="p">]</span><span class="o">.</span><span class="n">dims</span><span class="p">)</span>
+
+    <span class="c1"># Filter some of the resulting edge data to get defined edges</span>
+    <span class="n">edge_obj</span> <span class="o">=</span> <span class="n">edge_obj</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">edge_obj</span> <span class="o">&gt;</span> <span class="mf">5.0</span><span class="p">)</span>
+    <span class="n">edge_obj</span> <span class="o">=</span> <span class="n">edge_obj</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">fill_na</span><span class="p">)</span>
+
+    <span class="c1"># Do a diff along the height dimension to define edge</span>
+    <span class="n">diff</span> <span class="o">=</span> <span class="n">edge_obj</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="c1"># Get height variable to use for cbh</span>
+    <span class="n">height</span> <span class="o">=</span> <span class="n">obj</span><span class="p">[</span><span class="n">height_dim</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+
+    <span class="c1"># Run through times and find the height</span>
+    <span class="n">cbh</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">diff</span><span class="p">)[</span><span class="mi">0</span><span class="p">]):</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">diff</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:]</span> <span class="o">&gt;</span> <span class="mf">5.0</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">height</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">ht</span> <span class="o">=</span> <span class="n">height</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ht</span> <span class="o">=</span> <span class="n">height</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">index</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">cbh</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ht</span><span class="p">[</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">cbh</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+
+    <span class="c1"># Create DataArray to add to Object</span>
+    <span class="n">da</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">cbh</span><span class="p">,</span> <span class="n">dims</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span> <span class="n">coords</span><span class="o">=</span><span class="p">[</span><span class="n">obj</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">])</span>
+    <span class="n">obj</span><span class="p">[</span><span class="s1">&#39;cbh_sobel&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">da</span>
+    <span class="n">obj</span><span class="p">[</span><span class="s1">&#39;cbh_sobel&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;long_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+        <span class="p">[</span><span class="s1">&#39;CBH calculated from&#39;</span><span class="p">,</span> <span class="n">variable</span><span class="p">,</span> <span class="s1">&#39;using sobel filter&#39;</span><span class="p">]</span>
+    <span class="p">)</span>
+    <span class="n">obj</span><span class="p">[</span><span class="s1">&#39;cbh_sobel&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;units&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">obj</span><span class="p">[</span><span class="n">height_dim</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;units&#39;</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">obj</span></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018, ACT Developers.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8YN80YZDD8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-8YN80YZDD8', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

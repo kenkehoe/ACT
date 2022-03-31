@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>act.retrievals.sst_from_irt &mdash; Atmospheric data Community Toolkit 0.post1+g07c747f documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/plot_directive.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sg_gallery.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sg_gallery-binder.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sg_gallery-dataframe.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/sg_gallery-rendered-html.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="act.retrievals.sum_function_irt" href="act.retrievals.sum_function_irt.html" />
+    <link rel="prev" title="act.retrievals.process_sp2_psds" href="act.retrievals.process_sp2_psds.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Atmospheric data Community Toolkit
+          </a>
+              <div class="version">
+                0.post1+g07c747f
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../CREATING_ENVIRONMENTS.html">Setting up an Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../CONTRIBUTING.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../source/auto_examples/index.html">ACT Example Gallery</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">API Reference Manual</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="act.corrections.html">act.corrections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="act.discovery.html">act.discovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="act.io.html">act.io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="act.plotting.html">act.plotting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="act.qc.html">act.qc</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="act.retrievals.html">act.retrievals</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="act.retrievals.aeri2irt.html">act.retrievals.aeri2irt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="act.retrievals.calc_sp2_diams_masses.html">act.retrievals.calc_sp2_diams_masses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="act.retrievals.calculate_dsh_from_dsdh_sdn.html">act.retrievals.calculate_dsh_from_dsdh_sdn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="act.retrievals.calculate_irradiance_stats.html">act.retrievals.calculate_irradiance_stats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="act.retrievals.calculate_longwave_radiation.html">act.retrievals.calculate_longwave_radiation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="act.retrievals.calculate_net_radiation.html">act.retrievals.calculate_net_radiation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="act.retrievals.calculate_pbl_liu_liang.html">act.retrievals.calculate_pbl_liu_liang</a></li>
+<li class="toctree-l3"><a class="reference internal" href="act.retrievals.calculate_precipitable_water.html">act.retrievals.calculate_precipitable_water</a></li>
+<li class="toctree-l3"><a class="reference internal" href="act.retrievals.calculate_stability_indicies.html">act.retrievals.calculate_stability_indicies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="act.retrievals.compute_winds_from_ppi.html">act.retrievals.compute_winds_from_ppi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="act.retrievals.generic_sobel_cbh.html">act.retrievals.generic_sobel_cbh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="act.retrievals.process_sp2_psds.html">act.retrievals.process_sp2_psds</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">act.retrievals.sst_from_irt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="act.retrievals.sum_function_irt.html">act.retrievals.sum_function_irt</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="act.utils.html">act.utils</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Downloads</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://anaconda.org/conda-forge/act-atmos/files">Anaconda Cloud</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/ARM-DOE/ACT">GitHub Repository</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/ARM-DOE/ACT/archive/master.zip">Zip File of Repository</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting Help</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/ARM-DOE/ACT/issues">GitHub Issue Tracker</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Atmospheric data Community Toolkit</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../index.html">API Reference Manual</a> &raquo;</li>
+          <li><a href="act.retrievals.html">act.retrievals</a> &raquo;</li>
+      <li>act.retrievals.sst_from_irt</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/API/generated/act.retrievals.sst_from_irt.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="act-retrievals-sst-from-irt">
+<h1>act.retrievals.sst_from_irt<a class="headerlink" href="#act-retrievals-sst-from-irt" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="act.retrievals.sst_from_irt">
+<span class="sig-prename descclassname"><span class="pre">act.retrievals.</span></span><span class="sig-name descname"><span class="pre">sst_from_irt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sky_irt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'sky_ir_temp'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sfc_irt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'sfc_ir_temp'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">emis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.986</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tempLow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">250.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tempHigh</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">350.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sst_variable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'sea_surface_temperature'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/act/retrievals/irt.html#sst_from_irt"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#act.retrievals.sst_from_irt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base function to calculate sea surface temperatures from Sky and Surface IRT values.
+This is meant to take advantage of dask and multiprocessing</p>
+<p>Code was adapted by Adam Theisen from code developed by Kenneth Kehoe
+and based on work by Donlon et al 2008</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<em>xarray Dataset</em>) – Data object</p></li>
+<li><p><strong>sky_irt</strong> (<em>string</em>) – Sky ir temperature variable name</p></li>
+<li><p><strong>sfc_irt</strong> (<em>string</em>) – Surface ir temperature variable name</p></li>
+<li><p><strong>emis</strong> (<em>float</em>) – Seawater emissivity.  Default of 0.986</p></li>
+<li><p><strong>maxit</strong> (<em>int</em>) – Max number of iterations to run through with brentq optimization. Default of 500</p></li>
+<li><p><strong>tempLow</strong> (<em>float</em>) – Low range of temperature values to pass through minimization function. Default of 250</p></li>
+<li><p><strong>tempHigh</strong> (<em>float</em>) – Low range of temperature values to pass through minimization function. Default of 350</p></li>
+<li><p><strong>tol</strong> (<em>float</em>) – Tolerance value. Default of 0.1</p></li>
+<li><p><strong>sst_variable</strong> (<em>string</em>) – Variable name to save sst values to</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>obj</strong> (<em>xarray Dataset</em>) – Data object with Sea surface temperature array inserted</p>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<p>Donlon, C., I.S. Robinson, W. Wimmer, G. Fisher, M. Reynolds, R. Edwards,
+and T.J. Nightingale, 2008: An Infrared Sea Surface Temperature Autonomous
+Radiometer (ISAR) for Deployment aboard Volunteer Observing Ships (VOS).
+J. Atmos. Oceanic Technol., 25, 93–113, <a class="reference external" href="https://doi.org/10.1175/2007JTECHO505.1">https://doi.org/10.1175/2007JTECHO505.1</a></p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="act.retrievals.process_sp2_psds.html" class="btn btn-neutral float-left" title="act.retrievals.process_sp2_psds" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="act.retrievals.sum_function_irt.html" class="btn btn-neutral float-right" title="act.retrievals.sum_function_irt" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2018, ACT Developers.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8YN80YZDD8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-8YN80YZDD8', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>
