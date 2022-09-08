@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Plot multiple datasets &#8212; Atmospheric data Community Toolkit 0.post1+g2e598c8 documentation</title>
+    <title>Plot multiple datasets &#8212; Atmospheric data Community Toolkit 0.post1+g80afbb1 documentation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -25,7 +25,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
@@ -50,8 +50,8 @@
     <script src="../../_static/doc_shared.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Changing units in dataset" href="plot_change_units.html" />
-    <link rel="prev" title="Forcing line plots with 2D data and QC" href="plot_force_line_qc.html" /> 
+    <link rel="next" title="Airnow Data" href="plot_airnow.html" />
+    <link rel="prev" title="Data rose plot" href="plot_data_rose.html" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -193,154 +193,127 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    <ul class="nav bd-sidenav">
+    <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="plot_rh_timeseries.html">
    Plot winds and relative humidity from sounding data
   </a>
  </li>
-</ul>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="plot_asos_temp.html">
    Query and plot ASOS data
   </a>
  </li>
-</ul>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="plot_qc.html">
    Plotting QC Flags
   </a>
  </li>
-</ul>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="plot_raw_minimpl.html">
    Read and plot a PPI from raw mini-MPL data
   </a>
  </li>
-</ul>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="plot_daytime_averages.html">
    Calculate and plot daily daytime temperature averages
   </a>
  </li>
-</ul>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="plot_sonde.html">
    Plot a timeseries of sounding data
   </a>
  </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="plot_skewt.html">
-   Skew-T plot of a sounding
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="plot_get_stability_indices_example.html">
    Retrieve stability indicies from a sounding
   </a>
  </li>
-</ul>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="plot_correct_ship_wind_data.html">
    Correct wind data for ship motion
   </a>
  </li>
-</ul>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="plot_wind_rose.html">
    Windrose and windbarb timeseries plot
   </a>
  </li>
-</ul>
-<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="plot_skewt.html">
+   Skew-T plot of a sounding
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="plot_dqr_qc.html">
    Query the ARM DQR webservice
   </a>
  </li>
-</ul>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="plot_ceil.html">
    Simple plot of 2D data
   </a>
  </li>
-</ul>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="plot_contour.html">
    Spatial contour plot
   </a>
  </li>
-</ul>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="plot_xsection.html">
    Multidimensional cross sections
   </a>
  </li>
-</ul>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="plot_force_line_qc.html">
    Forcing line plots with 2D data and QC
   </a>
  </li>
-</ul>
-<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="plot_noaa_fmcw_moment.html">
+   NOAA FMCW and parsivel plot
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="plot_data_rose.html">
+   Data rose plot
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Plot multiple datasets
   </a>
  </li>
-</ul>
-<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="plot_airnow.html">
+   Airnow Data
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="plot_change_units.html">
    Changing units in dataset
   </a>
  </li>
-</ul>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="plot_qc_bsrn.html">
    Plotting Baseline Surface Radiation Network (BSRN) QC Flags
   </a>
  </li>
-</ul>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="plot_weighted_average.html">
    Calculate and plot weighted means
   </a>
  </li>
-</ul>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="plot_state_variable.html">
    Plotting state variables
   </a>
  </li>
-</ul>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="plot_qc_example.html">
    Working with embedded quality control variables
   </a>
  </li>
-</ul>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="plot_arm_qc.html">
    Working with and expanding embedded quality control variables
@@ -443,8 +416,8 @@ plot multiple datasets at a time.</p>
 <span class="n">met_ds</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  6.351 seconds)</p>
-<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-source-auto-examples-plot-multiple-dataset-py">
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  6.334 seconds)</p>
+<div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-source-auto-examples-plot-multiple-dataset-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/b9c08ebfc9891325f08389c6a6f52fd4/plot_multiple_dataset.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_multiple_dataset.py</span></code></a></p>
 </div>
@@ -464,17 +437,17 @@ plot multiple datasets at a time.</p>
               
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="plot_force_line_qc.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="plot_data_rose.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Forcing line plots with 2D data and QC</p>
+            <p class="prev-next-title">Data rose plot</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="plot_change_units.html" title="next page">
+    <a class='right-next' id="next-link" href="plot_airnow.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Changing units in dataset</p>
+        <p class="prev-next-title">Airnow Data</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

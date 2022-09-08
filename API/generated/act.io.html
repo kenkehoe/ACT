@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>act.io &#8212; Atmospheric data Community Toolkit 0.post1+g2e598c8 documentation</title>
+    <title>act.io &#8212; Atmospheric data Community Toolkit 0.post1+g80afbb1 documentation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -25,7 +25,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
@@ -363,6 +363,16 @@
    <li class="toctree-l2">
     <a class="reference internal" href="act.io.read_netcdf.html">
      act.io.read_netcdf
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="act.io.read_psl_parsivel.html">
+     act.io.read_psl_parsivel
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="act.io.read_psl_radar_fmcw_moment.html">
+     act.io.read_psl_radar_fmcw_moment
     </a>
    </li>
    <li class="toctree-l2">
@@ -757,6 +767,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="act.plotting.WindRoseDisplay.plot.html">
        act.plotting.WindRoseDisplay.plot
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="act.plotting.WindRoseDisplay.plot_data.html">
+       act.plotting.WindRoseDisplay.plot_data
       </a>
      </li>
      <li class="toctree-l3">
@@ -1789,10 +1804,10 @@
 <td><p>Function to read Halocarbon data from NOAA GML.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="act.io.read_gml_met.html#act.io.read_gml_met" title="act.io.read_gml_met"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_gml_met</span></code></a>([filename, convert_missing])</p></td>
-<td><p>Function to read meteorlogical data from NOAA GML.</p></td>
+<td><p>Function to read meteorological data from NOAA GML.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="act.io.read_gml_ozone.html#act.io.read_gml_ozone" title="act.io.read_gml_ozone"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_gml_ozone</span></code></a>([filename])</p></td>
-<td><p>Function to read carbon dioxide data from NOAA GML.</p></td>
+<td><p>Function to read ozone data from NOAA GML.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="act.io.read_gml_radiation.html#act.io.read_gml_radiation" title="act.io.read_gml_radiation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_gml_radiation</span></code></a>([filename, ...])</p></td>
 <td><p>Function to read radiation data from NOAA GML.</p></td>
@@ -1802,6 +1817,12 @@
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="act.io.read_netcdf.html#act.io.read_netcdf" title="act.io.read_netcdf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_netcdf</span></code></a>(filenames[, concat_dim, ...])</p></td>
 <td><p>Returns <cite>xarray.Dataset</cite> with stored data and metadata from a user-defined query of ARM-standard netCDF files from a single datastream.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="act.io.read_psl_parsivel.html#act.io.read_psl_parsivel" title="act.io.read_psl_parsivel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_psl_parsivel</span></code></a>(files)</p></td>
+<td><p>Returns <cite>xarray.Dataset</cite> with stored data and metadata from a user-defined NOAA PSL parsivel</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="act.io.read_psl_radar_fmcw_moment.html#act.io.read_psl_radar_fmcw_moment" title="act.io.read_psl_radar_fmcw_moment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_psl_radar_fmcw_moment</span></code></a>(files)</p></td>
+<td><p>Returns <cite>xarray.Dataset</cite> with stored data and metadata from NOAA PSL FMCW Radar files.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="act.io.read_psl_wind_profiler.html#act.io.read_psl_wind_profiler" title="act.io.read_psl_wind_profiler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_psl_wind_profiler</span></code></a>(filename[, transpose])</p></td>
 <td><p>Returns <cite>xarray.Dataset</cite> with stored data and metadata from a user-defined NOAA PSL wind profiler file.</p></td>
