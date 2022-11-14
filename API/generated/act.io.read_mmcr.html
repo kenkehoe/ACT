@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>act.qc.QCFilter.add_iqr_test &#8212; Atmospheric data Community Toolkit 0.post1+ge8a40ff documentation</title>
+    <title>act.io.read_mmcr &#8212; Atmospheric data Community Toolkit 0.post1+ge8a40ff documentation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -44,8 +44,8 @@
     <script src="../../_static/doc_shared.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="act.qc.QCFilter.add_less_equal_test" href="act.qc.QCFilter.add_less_equal_test.html" />
-    <link rel="prev" title="act.qc.QCFilter.add_inside_test" href="act.qc.QCFilter.add_inside_test.html" /> 
+    <link rel="next" title="act.io.read_netcdf" href="act.io.read_netcdf.html" />
+    <link rel="prev" title="act.io.read_icartt" href="act.io.read_icartt.html" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -240,16 +240,16 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="act.io.html">
    act.io
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="act.io.WriteDataset.html">
      act.io.WriteDataset
@@ -327,8 +327,8 @@
      act.io.read_icartt
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="act.io.read_mmcr.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      act.io.read_mmcr
     </a>
    </li>
@@ -822,26 +822,26 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="act.qc.html">
    act.qc
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
   <label for="toctree-checkbox-13">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
-   <li class="toctree-l2 current active has-children">
+  <ul>
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="act.qc.QCFilter.html">
      act.qc.QCFilter
     </a>
-    <input checked="" class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
     <label for="toctree-checkbox-14">
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul class="current">
+    <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="act.qc.QCFilter.add_atmospheric_pressure_test.html">
        act.qc.QCFilter.add_atmospheric_pressure_test
@@ -882,8 +882,8 @@
        act.qc.QCFilter.add_inside_test
       </a>
      </li>
-     <li class="toctree-l3 current active">
-      <a class="current reference internal" href="#">
+     <li class="toctree-l3">
+      <a class="reference internal" href="act.qc.QCFilter.add_iqr_test.html">
        act.qc.QCFilter.add_iqr_test
       </a>
      </li>
@@ -1367,39 +1367,21 @@
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
               <div>
-                 <section id="act-qc-qcfilter-add-iqr-test">
-<h1>act.qc.QCFilter.add_iqr_test<a class="headerlink" href="#act-qc-qcfilter-add-iqr-test" title="Permalink to this headline">#</a></h1>
-<dl class="py method">
-<dt class="sig sig-object py" id="act.qc.QCFilter.add_iqr_test">
-<span class="sig-prename descclassname"><span class="pre">QCFilter.</span></span><span class="sig-name descname"><span class="pre">add_iqr_test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coef</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_meaning</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_assessment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Indeterminate'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flag_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prepend_text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#act.qc.QCFilter.add_iqr_test" title="Permalink to this definition">#</a></dt>
-<dd><p>Method to perform an interquartile range outliers test on 1D data. Data that lie within the
-lower and upper limits are considered non-outliers. The lower limit is the number
-that lies coef IQRs below the first quartile; the upper limit is the number that
-lies coef IQRs above the third quartile. This method will flag data
-failing the test in the corresponding quality control variable.</p>
-<p>The library used to perform test does not accept NaN values. The NaN values will
-be filtered out prior to testing and outlier values will be matched after. This
-can cause the test to run slower on large data sets.</p>
+                 <section id="act-io-read-mmcr">
+<h1>act.io.read_mmcr<a class="headerlink" href="#act-io-read-mmcr" title="Permalink to this headline">#</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="act.io.read_mmcr">
+<span class="sig-prename descclassname"><span class="pre">act.io.</span></span><span class="sig-name descname"><span class="pre">read_mmcr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filenames</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/act/io/armfiles.html#read_mmcr"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#act.io.read_mmcr" title="Permalink to this definition">#</a></dt>
+<dd><p>Reads in ARM MMCR files and splits up the variables into specific
+mode variables based on what’s in the files.  MMCR files have the modes
+interleaved and are not readable using xarray so some modifications are
+needed ahead of time.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>var_name</strong> (<em>str</em>) – Data variable name.</p></li>
-<li><p><strong>coef</strong> (<em>float</em>) – Coefficient by which interquartile range is multiplied.</p></li>
-<li><p><strong>test_meaning</strong> (<em>str</em>) – Optional text description to add to flag_meanings
-describing the test. Will use a default if not set.</p></li>
-<li><p><strong>test_assessment</strong> (<em>str</em>) – Optional single word describing the assessment of the test.
-Will use a default if not set.</p></li>
-<li><p><strong>test_number</strong> (<em>int</em>) – Optional test number to use. If not set will use next available
-test number.</p></li>
-<li><p><strong>flag_value</strong> (<em>boolean</em>) – Indicates that the tests are stored as integers
-not bit packed values in quality control variable.</p></li>
-<li><p><strong>prepend_text</strong> (<em>str</em>) – Optional text to prepend to the test meaning.
-Example is indicate what institution added the test.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>filenames</strong> (<em>str, pathlib.PosixPath or list of str</em>) – Name of file(s) to read.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>test_info</strong> (<em>tuple</em>) – A tuple containing test information including var_name, qc variable name,
-test_number, test_meaning, test_assessment</p>
+<dd class="field-even"><p><strong>obj</strong> (<em>Object (or None)</em>) – ACT dataset (or None if no data file(s) found).</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1415,17 +1397,17 @@ test_number, test_meaning, test_assessment</p>
               
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="act.qc.QCFilter.add_inside_test.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="act.io.read_icartt.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">act.qc.QCFilter.add_inside_test</p>
+            <p class="prev-next-title">act.io.read_icartt</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="act.qc.QCFilter.add_less_equal_test.html" title="next page">
+    <a class='right-next' id="next-link" href="act.io.read_netcdf.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">act.qc.QCFilter.add_less_equal_test</p>
+        <p class="prev-next-title">act.io.read_netcdf</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
