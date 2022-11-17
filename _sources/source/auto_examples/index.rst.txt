@@ -6,8 +6,7 @@ ACT Example Gallery
 This gallery houses examples on different use cases for act including
 downloading data from web APIs, visualization various types of data,
 and more.  If there are specific use cases you would like to see examples
-of, please head on over to the `ACT discussion page <https://github.com/ARM-DOE/ACT/discussions>`_
-on GitHub.
+of, please head on over to the `ACT discussion page <https://github.com/ARM-DOE/ACT/discussions>`_ on GitHub.
 
 
 
@@ -251,6 +250,23 @@ on GitHub.
 .. raw:: html
 
       <div class="sphx-glr-thumbnail-title">Spatial contour plot</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This is an example of how to use some different aspects of ACT&#x27;s plotting tools as well as Xarr...">
+
+.. only:: html
+
+  .. image:: /source/auto_examples/images/thumb/sphx_glr_plot_examples_thumb.png
+    :alt: Xarray Plotting Examples
+
+  :ref:`sphx_glr_source_auto_examples_plot_examples.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Xarray Plotting Examples</div>
     </div>
 
 
@@ -514,6 +530,7 @@ on GitHub.
    /source/auto_examples/plot_dqr_qc
    /source/auto_examples/plot_ceil
    /source/auto_examples/plot_contour
+   /source/auto_examples/plot_examples
    /source/auto_examples/plot_xsection
    /source/auto_examples/plot_icartt
    /source/auto_examples/plot_force_line_qc
