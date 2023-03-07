@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>act.retrievals.calculate_irradiance_stats &#8212; Atmospheric data Community Toolkit 0.post1+ge74ddc2 documentation</title>
+    <title>act.retrievals.calculate_irradiance_stats &#8212; Atmospheric data Community Toolkit 0.post1+g96abd7e documentation</title>
     
     <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -497,6 +497,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="act.plotting.ContourDisplay.group_by.html">
+       act.plotting.ContourDisplay.group_by
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="act.plotting.ContourDisplay.plot_station.html">
        act.plotting.ContourDisplay.plot_station
       </a>
@@ -539,6 +544,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="act.plotting.Display.group_by.html">
+       act.plotting.Display.group_by
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="act.plotting.Display.put_display_in_subplot.html">
        act.plotting.Display.put_display_in_subplot
       </a>
@@ -576,6 +586,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="act.plotting.GeographicPlotDisplay.group_by.html">
+       act.plotting.GeographicPlotDisplay.group_by
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="act.plotting.GeographicPlotDisplay.put_display_in_subplot.html">
        act.plotting.GeographicPlotDisplay.put_display_in_subplot
       </a>
@@ -605,6 +620,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="act.plotting.HistogramDisplay.assign_to_figure_axis.html">
        act.plotting.HistogramDisplay.assign_to_figure_axis
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="act.plotting.HistogramDisplay.group_by.html">
+       act.plotting.HistogramDisplay.group_by
       </a>
      </li>
      <li class="toctree-l3">
@@ -670,6 +690,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="act.plotting.SkewTDisplay.group_by.html">
+       act.plotting.SkewTDisplay.group_by
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="act.plotting.SkewTDisplay.plot_from_spd_and_dir.html">
        act.plotting.SkewTDisplay.plot_from_spd_and_dir
       </a>
@@ -729,6 +754,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="act.plotting.TimeSeriesDisplay.fill_between.html">
        act.plotting.TimeSeriesDisplay.fill_between
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="act.plotting.TimeSeriesDisplay.group_by.html">
+       act.plotting.TimeSeriesDisplay.group_by
       </a>
      </li>
      <li class="toctree-l3">
@@ -804,6 +834,11 @@
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="act.plotting.WindRoseDisplay.group_by.html">
+       act.plotting.WindRoseDisplay.group_by
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="act.plotting.WindRoseDisplay.plot.html">
        act.plotting.WindRoseDisplay.plot
       </a>
@@ -853,6 +888,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="act.plotting.XSectionDisplay.assign_to_figure_axis.html">
        act.plotting.XSectionDisplay.assign_to_figure_axis
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="act.plotting.XSectionDisplay.group_by.html">
+       act.plotting.XSectionDisplay.group_by
       </a>
      </li>
      <li class="toctree-l3">
@@ -1245,6 +1285,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="act.utils.adjust_timestamp.html">
+     act.utils.adjust_timestamp
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="act.utils.assign_coordinates.html">
      act.utils.assign_coordinates
     </a>
@@ -1447,12 +1492,12 @@
 <h1>act.retrievals.calculate_irradiance_stats<a class="headerlink" href="#act-retrievals-calculate-irradiance-stats" title="Permalink to this heading">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="act.retrievals.calculate_irradiance_stats">
-<span class="sig-prename descclassname"><span class="pre">act.retrievals.</span></span><span class="sig-name descname"><span class="pre">calculate_irradiance_stats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variable2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diff_output_variable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ratio_output_variable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/act/retrievals/radiation.html#calculate_irradiance_stats"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#act.retrievals.calculate_irradiance_stats" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">act.retrievals.</span></span><span class="sig-name descname"><span class="pre">calculate_irradiance_stats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variable2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diff_output_variable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ratio_output_variable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/act/retrievals/radiation.html#calculate_irradiance_stats"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#act.retrievals.calculate_irradiance_stats" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function to calculate the difference and ratio between two irradiance.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>obj</strong> (<em>ACT object</em>) – Object where variables for these calculations are stored</p></li>
+<li><p><strong>ds</strong> (<em>Xarray Dataset</em>) – Xarray dataset where variables for these calculations are stored</p></li>
 <li><p><strong>variable</strong> (<em>str</em>) – Name of the first irradiance variable</p></li>
 <li><p><strong>variable2</strong> (<em>str</em>) – Name of the second irradiance variable</p></li>
 <li><p><strong>diff_output_variable</strong> (<em>str</em>) – Variable name to store the difference results
@@ -1462,7 +1507,7 @@ Defaults to ‘ratio[underscore]’+variable</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>obj</strong> (<em>ACT Object</em>) – Object with calculations included as new variables.</p>
+<dd class="field-even"><p><strong>ds</strong> (<em>Xarray Dataset</em>) – Xarray dataset with calculations included as new variables.</p>
 </dd>
 </dl>
 </dd></dl>
