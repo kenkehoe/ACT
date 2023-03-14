@@ -6,16 +6,16 @@
 
 Computation times
 =================
-**00:06.181** total execution time for **source_auto_examples_qc** files:
+**00:06.748** total execution time for **source_auto_examples_qc** files:
 
 +-------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_source_auto_examples_qc_plot_arm_qc.py` (``plot_arm_qc.py``)               | 00:04.190 | 0.0 MB |
+| :ref:`sphx_glr_source_auto_examples_qc_plot_arm_qc.py` (``plot_arm_qc.py``)               | 00:04.403 | 0.0 MB |
 +-------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_source_auto_examples_qc_plot_qc_bsrn.py` (``plot_qc_bsrn.py``)             | 00:01.246 | 0.0 MB |
+| :ref:`sphx_glr_source_auto_examples_qc_plot_qc_bsrn.py` (``plot_qc_bsrn.py``)             | 00:01.342 | 0.0 MB |
 +-------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_source_auto_examples_qc_plot_dqr_qc.py` (``plot_dqr_qc.py``)               | 00:00.383 | 0.0 MB |
+| :ref:`sphx_glr_source_auto_examples_qc_plot_dqr_qc.py` (``plot_dqr_qc.py``)               | 00:00.630 | 0.0 MB |
 +-------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_source_auto_examples_qc_plot_force_line_qc.py` (``plot_force_line_qc.py``) | 00:00.287 | 0.0 MB |
+| :ref:`sphx_glr_source_auto_examples_qc_plot_force_line_qc.py` (``plot_force_line_qc.py``) | 00:00.294 | 0.0 MB |
 +-------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_source_auto_examples_qc_plot_qc_example.py` (``plot_qc_example.py``)       | 00:00.075 | 0.0 MB |
+| :ref:`sphx_glr_source_auto_examples_qc_plot_qc_example.py` (``plot_qc_example.py``)       | 00:00.078 | 0.0 MB |
 +-------------------------------------------------------------------------------------------+-----------+--------+
