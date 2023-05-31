@@ -39,7 +39,7 @@ over Oklahoma.
 
  .. code-block:: none
 
-    /usr/share/miniconda3/envs/act-docs/lib/python3.10/site-packages/dask/core.py:119: RuntimeWarning: invalid value encountered in log10
+    /usr/share/miniconda3/envs/act-docs/lib/python3.10/site-packages/dask/core.py:121: RuntimeWarning: invalid value encountered in log10
       return func(*(_execute_task(a, cache) for a in args))
 
 
@@ -80,7 +80,7 @@ over Oklahoma.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  3.780 seconds)
+   **Total running time of the script:** ( 0 minutes  3.196 seconds)
 
 
 .. _sphx_glr_download_source_auto_examples_plotting_plot_ceil.py:
