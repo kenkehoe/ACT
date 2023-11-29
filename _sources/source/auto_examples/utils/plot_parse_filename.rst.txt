@@ -58,7 +58,7 @@ the datastream filename into its constituent parts.
 
 |
 
-.. code-block:: default
+.. code-block:: Python
 
 
     from act.utils.data_utils import DatastreamParserARM
@@ -98,7 +98,7 @@ the datastream filename into its constituent parts.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.002 seconds)
+   **Total running time of the script:** (0 minutes 0.001 seconds)
 
 
 .. _sphx_glr_download_source_auto_examples_utils_plot_parse_filename.py:
@@ -107,16 +107,13 @@ the datastream filename into its constituent parts.
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
+      :download:`Download Jupyter notebook: plot_parse_filename.ipynb <plot_parse_filename.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_parse_filename.py <plot_parse_filename.py>`
-
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-      :download:`Download Jupyter notebook: plot_parse_filename.ipynb <plot_parse_filename.ipynb>`
 
 
 .. only:: html

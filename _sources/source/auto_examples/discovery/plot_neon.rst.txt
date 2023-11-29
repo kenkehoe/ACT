@@ -33,7 +33,7 @@ on the North Slope and plot them
 
 
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import os
@@ -97,16 +97,13 @@ on the North Slope and plot them
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
+      :download:`Download Jupyter notebook: plot_neon.ipynb <plot_neon.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_neon.py <plot_neon.py>`
-
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-      :download:`Download Jupyter notebook: plot_neon.ipynb <plot_neon.ipynb>`
 
 
 .. only:: html

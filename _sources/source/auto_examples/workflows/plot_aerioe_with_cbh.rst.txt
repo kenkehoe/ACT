@@ -33,7 +33,7 @@ ceilometer cloud base height(cbh).
 
 
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import matplotlib.pyplot as plt
@@ -100,16 +100,13 @@ ceilometer cloud base height(cbh).
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
+      :download:`Download Jupyter notebook: plot_aerioe_with_cbh.ipynb <plot_aerioe_with_cbh.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_aerioe_with_cbh.py <plot_aerioe_with_cbh.py>`
-
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-      :download:`Download Jupyter notebook: plot_aerioe_with_cbh.ipynb <plot_aerioe_with_cbh.ipynb>`
 
 
 .. only:: html

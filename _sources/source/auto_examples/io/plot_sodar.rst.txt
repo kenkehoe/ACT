@@ -50,7 +50,7 @@ Author: Zachary Sherman
 
 |
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import matplotlib.pyplot as plt
@@ -86,16 +86,13 @@ Author: Zachary Sherman
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
 
-
+      :download:`Download Jupyter notebook: plot_sodar.ipynb <plot_sodar.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_sodar.py <plot_sodar.py>`
-
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
-
-      :download:`Download Jupyter notebook: plot_sodar.ipynb <plot_sodar.ipynb>`
 
 
 .. only:: html
