@@ -13,6 +13,7 @@ known failures to clean up the data variable.
 
 import os
 
+from arm_test_data import DATASETS
 import matplotlib.pyplot as plt
 
 import act
@@ -24,9 +25,9 @@ token = os.getenv('ARM_PASSWORD')
 
 # We can use the ACT module for downloading data from the ARM web service
 if username is None or token is None or len(username) == 0 or len(token) == 0:
-    results = act.tests.sample_files.EXAMPLE_MFRSR
+    results = DATASETS.fetch('sgpmfrsr7nchE11.b1.20210329.070000.nc')
 else:
-    results = act.discovery.download_data(
+    results = act.discovery.download_arm_data(
         username, token, 'sgpmfrsr7nchE11.b1', '2021-03-29', '2021-03-29'
     )
 print(results)
@@ -43,7 +44,7 @@ qc_variable = 'qc_' + variable
 # the cleanup_qc keyword. This will convert the quality control variable from the ARM stanard
 # to Climate and Forecast standard used internally for all the quality control calls.
 keep_vars = [variable, qc_variable, 'lat', 'lon']
-ds = act.io.armfiles.read_netcdf(results, keep_variables=keep_vars, cleanup_qc=True)
+ds = act.io.arm.read_arm_netcdf(results, keep_variables=keep_vars, cleanup_qc=True)
 print(ds)
 
 # Create a plotting display object with 2 plots

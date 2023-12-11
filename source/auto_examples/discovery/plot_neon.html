@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>NEON Data &#8212; Atmospheric data Community Toolkit 0.post1+g4bf0e1e documentation</title>
+    <title>NEON Data &#8212; Atmospheric data Community Toolkit 0.post1+g42ee209 documentation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -296,18 +296,13 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../plotting/plot_sonde.html">
-     Plot a timeseries of sounding data
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../plotting/plot_hist_kwargs.html">
      Plot a histogram of Met data.
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../plotting/plot_rh_timeseries.html">
-     Plot winds and relative humidity from sounding data
+    <a class="reference internal" href="../plotting/plot_sonde.html">
+     Plot a timeseries of sounding data
     </a>
    </li>
    <li class="toctree-l2">
@@ -321,6 +316,21 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../plotting/plot_skewt.html">
+     Skew-T plot of a sounding
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plotting/plot_size_distribution.html">
+     Example Size Distribution Plots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plotting/plot_violin.html">
+     Investigate Temperature Quantiles
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../plotting/plot_multiple_column.html">
      Plot a timeseries of sounding data
     </a>
@@ -331,43 +341,13 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../plotting/plot_skewt.html">
-     Skew-T plot of a sounding
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../plotting/plot_days.html">
-     Calculate and plot wind rose plots separated by day.
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../plotting/plot_wind_rose.html">
-     Windrose and windbarb timeseries plot
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../plotting/plot_heatmap.html">
-     Example plot using heat maps
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../plotting/plot_size_distribution.html">
-     Example Size Distribution Plots
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../plotting/plot_contour.html">
-     Spatial contour plot
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../plotting/plot_ceil.html">
      Simple plot of 2D data
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../plotting/plot_violin.html">
-     Investigate Temperature Quantiles
+    <a class="reference internal" href="../plotting/plot_days.html">
+     Calculate and plot wind rose plots separated by day.
     </a>
    </li>
    <li class="toctree-l2">
@@ -381,13 +361,23 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../plotting/plot_heatmap.html">
+     Example plot using heat maps
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plotting/plot_secondary_y.html">
+     Secondary Y-Axis Plotting
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../plotting/plot_skewt_with_text.html">
      Skew-T plot of a sounding
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../plotting/plot_data_rose.html">
-     Data rose plot
+    <a class="reference internal" href="../plotting/plot_contour.html">
+     Spatial contour plot
     </a>
    </li>
    <li class="toctree-l2">
@@ -396,8 +386,23 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../plotting/plot_data_rose.html">
+     Data rose plot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plotting/plot_rh_timeseries.html">
+     Plot winds and relative humidity from sounding data
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../plotting/plot_presentweathercode.html">
      Plot Present Weather Code
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plotting/plot_wind_rose.html">
+     Windrose and windbarb timeseries plot
     </a>
    </li>
    <li class="toctree-l2">
@@ -519,13 +524,13 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../workflows/plot_weighted_average.html">
-     Calculate and plot weighted means
+    <a class="reference internal" href="../workflows/plot_merged_product.html">
+     Merge multiple datasets
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../workflows/plot_merged_product.html">
-     Merge multiple datasets
+    <a class="reference internal" href="../workflows/plot_weighted_average.html">
+     Calculate and plot weighted means
     </a>
    </li>
   </ul>
@@ -591,15 +596,15 @@ on the North Slope and plot them</p>
 
 <span class="k">if</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">token</span></a> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">token</span></a><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
     <span class="c1"># Download ARM data if a username/token are set</span>
-    <span class="n">files</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">discovery</span><span class="o">.</span><span class="n">download_data</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">username</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">token</span></a><span class="p">,</span> <span class="s1">&#39;nsametC1.b1&#39;</span><span class="p">,</span> <span class="s1">&#39;2022-10-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2022-10-07&#39;</span><span class="p">)</span>
-    <span class="n">ds</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">armfiles</span><span class="o">.</span><span class="n">read_netcdf</span><span class="p">(</span><span class="n">files</span><span class="p">)</span>
+    <span class="n">files</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">discovery</span><span class="o">.</span><span class="n">download_arm_data</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">username</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">token</span></a><span class="p">,</span> <span class="s1">&#39;nsametC1.b1&#39;</span><span class="p">,</span> <span class="s1">&#39;2022-10-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2022-10-07&#39;</span><span class="p">)</span>
+    <span class="n">ds</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">arm</span><span class="o">.</span><span class="n">read_arm_netcdf</span><span class="p">(</span><span class="n">files</span><span class="p">)</span>
 
     <span class="c1"># Download NEON Data</span>
     <span class="c1"># NEON sites can be found through the NEON website</span>
     <span class="c1"># https://www.neonscience.org/field-sites/explore-field-sites</span>
     <span class="n">site_code</span> <span class="o">=</span> <span class="s1">&#39;BARR&#39;</span>
     <span class="n">product_code</span> <span class="o">=</span> <span class="s1">&#39;DP1.00002.001&#39;</span>
-    <span class="n">result</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">discovery</span><span class="o">.</span><span class="n">get_neon</span><span class="o">.</span><span class="n">download_neon_data</span><span class="p">(</span><span class="n">site_code</span><span class="p">,</span> <span class="n">product_code</span><span class="p">,</span> <span class="s1">&#39;2022-10&#39;</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">discovery</span><span class="o">.</span><span class="n">neon</span><span class="o">.</span><span class="n">download_neon_data</span><span class="p">(</span><span class="n">site_code</span><span class="p">,</span> <span class="n">product_code</span><span class="p">,</span> <span class="s1">&#39;2022-10&#39;</span><span class="p">)</span>
 
     <span class="c1"># A number of files are downloaded and further explained in the readme file that&#39;s downloaded.</span>
     <span class="c1"># These are the files we will need for reading 1 minute NEON data</span>

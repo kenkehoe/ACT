@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Plot multiple datasets &#8212; Atmospheric data Community Toolkit 0.post1+g4bf0e1e documentation</title>
+    <title>Plot multiple datasets &#8212; Atmospheric data Community Toolkit 0.post1+g42ee209 documentation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -296,18 +296,13 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../plotting/plot_sonde.html">
-     Plot a timeseries of sounding data
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../plotting/plot_hist_kwargs.html">
      Plot a histogram of Met data.
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../plotting/plot_rh_timeseries.html">
-     Plot winds and relative humidity from sounding data
+    <a class="reference internal" href="../plotting/plot_sonde.html">
+     Plot a timeseries of sounding data
     </a>
    </li>
    <li class="toctree-l2">
@@ -321,6 +316,21 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../plotting/plot_skewt.html">
+     Skew-T plot of a sounding
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plotting/plot_size_distribution.html">
+     Example Size Distribution Plots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plotting/plot_violin.html">
+     Investigate Temperature Quantiles
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../plotting/plot_multiple_column.html">
      Plot a timeseries of sounding data
     </a>
@@ -331,43 +341,13 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../plotting/plot_skewt.html">
-     Skew-T plot of a sounding
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../plotting/plot_days.html">
-     Calculate and plot wind rose plots separated by day.
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../plotting/plot_wind_rose.html">
-     Windrose and windbarb timeseries plot
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../plotting/plot_heatmap.html">
-     Example plot using heat maps
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../plotting/plot_size_distribution.html">
-     Example Size Distribution Plots
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../plotting/plot_contour.html">
-     Spatial contour plot
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../plotting/plot_ceil.html">
      Simple plot of 2D data
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../plotting/plot_violin.html">
-     Investigate Temperature Quantiles
+    <a class="reference internal" href="../plotting/plot_days.html">
+     Calculate and plot wind rose plots separated by day.
     </a>
    </li>
    <li class="toctree-l2">
@@ -381,13 +361,23 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../plotting/plot_heatmap.html">
+     Example plot using heat maps
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plotting/plot_secondary_y.html">
+     Secondary Y-Axis Plotting
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../plotting/plot_skewt_with_text.html">
      Skew-T plot of a sounding
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../plotting/plot_data_rose.html">
-     Data rose plot
+    <a class="reference internal" href="../plotting/plot_contour.html">
+     Spatial contour plot
     </a>
    </li>
    <li class="toctree-l2">
@@ -396,8 +386,23 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../plotting/plot_data_rose.html">
+     Data rose plot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plotting/plot_rh_timeseries.html">
+     Plot winds and relative humidity from sounding data
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../plotting/plot_presentweathercode.html">
      Plot Present Weather Code
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plotting/plot_wind_rose.html">
+     Windrose and windbarb timeseries plot
     </a>
    </li>
    <li class="toctree-l2">
@@ -519,13 +524,13 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="plot_weighted_average.html">
-     Calculate and plot weighted means
+    <a class="reference internal" href="plot_merged_product.html">
+     Merge multiple datasets
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="plot_merged_product.html">
-     Merge multiple datasets
+    <a class="reference internal" href="plot_weighted_average.html">
+     Calculate and plot weighted means
     </a>
    </li>
   </ul>
@@ -583,6 +588,7 @@ plot multiple datasets at a time.</p>
 </ul>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 
+<span class="kn">from</span> <span class="nn">arm_test_data</span> <span class="kn">import</span> <span class="n">DATASETS</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="kn">import</span> <span class="nn">act</span>
@@ -594,14 +600,16 @@ plot multiple datasets at a time.</p>
 <span class="c1"># Get data from the web service if username and token are available</span>
 <span class="c1"># if not, use test data</span>
 <span class="k">if</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">username</span></a> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">token</span></a> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">username</span></a><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">token</span></a><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="n">ceil_ds</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">armfiles</span><span class="o">.</span><span class="n">read_netcdf</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">act</span><span class="o">.</span><span class="n">tests</span><span class="o">.</span><span class="n">sample_files</span><span class="o">.</span><span class="n">EXAMPLE_CEIL1</span></a><span class="p">)</span>
-    <span class="n">met_ds</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">armfiles</span><span class="o">.</span><span class="n">read_netcdf</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">act</span><span class="o">.</span><span class="n">tests</span><span class="o">.</span><span class="n">sample_files</span><span class="o">.</span><span class="n">EXAMPLE_MET1</span></a><span class="p">)</span>
+    <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">filename_ceil</span></a> <span class="o">=</span> <span class="n">DATASETS</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="s1">&#39;sgpceilC1.b1.20190101.000000.nc&#39;</span><span class="p">)</span>
+    <span class="n">ceil_ds</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">arm</span><span class="o">.</span><span class="n">read_arm_netcdf</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">filename_ceil</span></a><span class="p">)</span>
+    <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">filename_met</span></a> <span class="o">=</span> <span class="n">DATASETS</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="s1">&#39;sgpmetE13.b1.20190101.000000.cdf&#39;</span><span class="p">)</span>
+    <span class="n">met_ds</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">arm</span><span class="o">.</span><span class="n">read_arm_netcdf</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">filename_met</span></a><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="c1"># Download and read data</span>
-    <span class="n">results</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">discovery</span><span class="o">.</span><span class="n">download_data</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">username</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">token</span></a><span class="p">,</span> <span class="s1">&#39;sgpceilC1.b1&#39;</span><span class="p">,</span> <span class="s1">&#39;2022-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2022-01-07&#39;</span><span class="p">)</span>
-    <span class="n">ceil_ds</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">armfiles</span><span class="o">.</span><span class="n">read_netcdf</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
-    <span class="n">results</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">discovery</span><span class="o">.</span><span class="n">download_data</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">username</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">token</span></a><span class="p">,</span> <span class="s1">&#39;sgpmetE13.b1&#39;</span><span class="p">,</span> <span class="s1">&#39;2022-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2022-01-07&#39;</span><span class="p">)</span>
-    <span class="n">met_ds</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">armfiles</span><span class="o">.</span><span class="n">read_netcdf</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">discovery</span><span class="o">.</span><span class="n">download_arm_data</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">username</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">token</span></a><span class="p">,</span> <span class="s1">&#39;sgpceilC1.b1&#39;</span><span class="p">,</span> <span class="s1">&#39;2022-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2022-01-07&#39;</span><span class="p">)</span>
+    <span class="n">ceil_ds</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">arm</span><span class="o">.</span><span class="n">read_arm_netcdf</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">discovery</span><span class="o">.</span><span class="n">download_arm_data</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">username</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">token</span></a><span class="p">,</span> <span class="s1">&#39;sgpmetE13.b1&#39;</span><span class="p">,</span> <span class="s1">&#39;2022-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2022-01-07&#39;</span><span class="p">)</span>
+    <span class="n">met_ds</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">arm</span><span class="o">.</span><span class="n">read_arm_netcdf</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
 
 <span class="c1"># Read in CEIL data and correct it</span>
 <span class="n">ceil_ds</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">corrections</span><span class="o">.</span><span class="n">ceil</span><span class="o">.</span><span class="n">correct_ceil</span><span class="p">(</span><span class="n">ceil_ds</span><span class="p">,</span> <span class="o">-</span><span class="mf">9999.0</span><span class="p">)</span>
@@ -629,7 +637,7 @@ plot multiple datasets at a time.</p>
 <span class="n">met_ds</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 5.120 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 5.108 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-source-auto-examples-workflows-plot-multiple-dataset-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/ae05603c7d0ecf0ad7e25d9f9723cecb/plot_multiple_dataset.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_multiple_dataset.ipynb</span></code></a></p>

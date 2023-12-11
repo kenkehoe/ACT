@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Plot a timeseries of sounding data &#8212; Atmospheric data Community Toolkit 0.post1+g4bf0e1e documentation</title>
+    <title>Plot a timeseries of sounding data &#8212; Atmospheric data Community Toolkit 0.post1+g42ee209 documentation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -44,8 +44,8 @@
     <script src="../../../_static/doc_shared.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Plot a histogram of Met data." href="plot_hist_kwargs.html" />
-    <link rel="prev" title="Enhanced plot of a sounding" href="plot_enhanced_skewt.html" /> 
+    <link rel="next" title="Plot ARM AAF Flight Path" href="plot_aaf_track.html" />
+    <link rel="prev" title="Plot a histogram of Met data." href="plot_hist_kwargs.html" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -295,19 +295,14 @@
      Enhanced plot of a sounding
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Plot a timeseries of sounding data
-    </a>
-   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="plot_hist_kwargs.html">
      Plot a histogram of Met data.
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="plot_rh_timeseries.html">
-     Plot winds and relative humidity from sounding data
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Plot a timeseries of sounding data
     </a>
    </li>
    <li class="toctree-l2">
@@ -321,6 +316,21 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="plot_skewt.html">
+     Skew-T plot of a sounding
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="plot_size_distribution.html">
+     Example Size Distribution Plots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="plot_violin.html">
+     Investigate Temperature Quantiles
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="plot_multiple_column.html">
      Plot a timeseries of sounding data
     </a>
@@ -331,43 +341,13 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="plot_skewt.html">
-     Skew-T plot of a sounding
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="plot_days.html">
-     Calculate and plot wind rose plots separated by day.
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="plot_wind_rose.html">
-     Windrose and windbarb timeseries plot
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="plot_heatmap.html">
-     Example plot using heat maps
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="plot_size_distribution.html">
-     Example Size Distribution Plots
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="plot_contour.html">
-     Spatial contour plot
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="plot_ceil.html">
      Simple plot of 2D data
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="plot_violin.html">
-     Investigate Temperature Quantiles
+    <a class="reference internal" href="plot_days.html">
+     Calculate and plot wind rose plots separated by day.
     </a>
    </li>
    <li class="toctree-l2">
@@ -381,13 +361,23 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="plot_heatmap.html">
+     Example plot using heat maps
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="plot_secondary_y.html">
+     Secondary Y-Axis Plotting
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="plot_skewt_with_text.html">
      Skew-T plot of a sounding
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="plot_data_rose.html">
-     Data rose plot
+    <a class="reference internal" href="plot_contour.html">
+     Spatial contour plot
     </a>
    </li>
    <li class="toctree-l2">
@@ -396,8 +386,23 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="plot_data_rose.html">
+     Data rose plot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="plot_rh_timeseries.html">
+     Plot winds and relative humidity from sounding data
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="plot_presentweathercode.html">
      Plot Present Weather Code
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="plot_wind_rose.html">
+     Windrose and windbarb timeseries plot
     </a>
    </li>
    <li class="toctree-l2">
@@ -519,13 +524,13 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../workflows/plot_weighted_average.html">
-     Calculate and plot weighted means
+    <a class="reference internal" href="../workflows/plot_merged_product.html">
+     Merge multiple datasets
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../workflows/plot_merged_product.html">
-     Merge multiple datasets
+    <a class="reference internal" href="../workflows/plot_weighted_average.html">
+     Calculate and plot weighted means
     </a>
    </li>
   </ul>
@@ -578,9 +583,7 @@ to download the full example code</p>
 <p>This is a simple example for how to plot a timeseries of sounding
 data from the ARM SGP site.</p>
 <p>Author: Robert Jackson</p>
-<img src="../../../_images/sphx_glr_plot_sonde_001.png" srcset="../../../_images/sphx_glr_plot_sonde_001.png" alt="sgpsondewnpnC1.b1 wspd on 20190101, sgpsondewnpnC1.b1 tdry on 20190101, sgpsondewnpnC1.b1 rh on 20190101" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/home/runner/work/ACT/ACT/examples/plotting/plot_sonde.py:16: DeprecationWarning: act.io.armfiles.read_netcdf will be replaced in version 2.0.0 by act.io.arm.read_arm_netcdf()
-  sonde_ds = act.io.armfiles.read_netcdf(files)
-&lt;xarray.Dataset&gt;
+<img src="../../../_images/sphx_glr_plot_sonde_001.png" srcset="../../../_images/sphx_glr_plot_sonde_001.png" alt="sgpsondewnpnC1.b1 wspd on 20190101, sgpsondewnpnC1.b1 tdry on 20190101, sgpsondewnpnC1.b1 rh on 20190101" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;xarray.Dataset&gt;
 Dimensions:      (time: 4176)
 Coordinates:
   * time         (time) datetime64[ns] 2019-01-01T05:32:00 ... 2019-01-01T06:...
@@ -617,12 +620,13 @@ Attributes: (12/43)
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">arm_test_data</span> <span class="kn">import</span> <span class="n">DATASETS</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
 
 <span class="kn">import</span> <span class="nn">act</span>
 
-<a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">files</span></a> <span class="o">=</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">act</span><span class="o">.</span><span class="n">tests</span><span class="o">.</span><span class="n">sample_files</span><span class="o">.</span><span class="n">EXAMPLE_SONDE1</span></a>
-<span class="n">sonde_ds</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">armfiles</span><span class="o">.</span><span class="n">read_netcdf</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">files</span></a><span class="p">)</span>
+<a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">filename_sonde</span></a> <span class="o">=</span> <span class="n">DATASETS</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="s1">&#39;sgpsondewnpnC1.b1.20190101.053200.cdf&#39;</span><span class="p">)</span>
+<span class="n">sonde_ds</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">arm</span><span class="o">.</span><span class="n">read_arm_netcdf</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">filename_sonde</span></a><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">sonde_ds</span><span class="p">)</span>
 
 <span class="c1"># Plot data</span>
@@ -634,7 +638,7 @@ Attributes: (12/43)
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.242 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.303 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-source-auto-examples-plotting-plot-sonde-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/b2d475d8a16c0fa8ee27090ca283c59a/plot_sonde.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_sonde.ipynb</span></code></a></p>
@@ -655,17 +659,17 @@ Attributes: (12/43)
               
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="plot_enhanced_skewt.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="plot_hist_kwargs.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Enhanced plot of a sounding</p>
+            <p class="prev-next-title">Plot a histogram of Met data.</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="plot_hist_kwargs.html" title="next page">
+    <a class='right-next' id="next-link" href="plot_aaf_track.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Plot a histogram of Met data.</p>
+        <p class="prev-next-title">Plot ARM AAF Flight Path</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

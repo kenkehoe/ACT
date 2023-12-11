@@ -25,7 +25,7 @@ This is an example of how to download and
 plot ceiliometer data from the SGP site
 over Oklahoma.
 
-.. GENERATED FROM PYTHON SOURCE LINES 10-35
+.. GENERATED FROM PYTHON SOURCE LINES 10-39
 
 
 
@@ -39,8 +39,6 @@ over Oklahoma.
 
  .. code-block:: none
 
-    /home/runner/work/ACT/ACT/examples/plotting/plot_ceil.py:21: DeprecationWarning: act.io.armfiles.read_netcdf will be replaced in version 2.0.0 by act.io.arm.read_arm_netcdf()
-      ceil_ds = act.io.armfiles.read_netcdf(act.tests.sample_files.EXAMPLE_CEIL1, engine='netcdf4')
     /home/runner/micromamba/envs/act-docs/lib/python3.11/site-packages/dask/core.py:127: RuntimeWarning: invalid value encountered in log10
       return func(*(_execute_task(a, cache) for a in args))
 
@@ -55,7 +53,10 @@ over Oklahoma.
 
 
     import os
+
+    from arm_test_data import DATASETS
     import matplotlib.pyplot as plt
+
     import act
 
     # Place your username and token here
@@ -64,11 +65,12 @@ over Oklahoma.
 
     # If the username and token are not set, use the existing sample file
     if username is None or token is None or len(username) == 0 or len(token) == 0:
-        ceil_ds = act.io.armfiles.read_netcdf(act.tests.sample_files.EXAMPLE_CEIL1, engine='netcdf4')
+        filename_ceil = DATASETS.fetch('sgpceilC1.b1.20190101.000000.nc')
+        ceil_ds = act.io.arm.read_arm_netcdf(filename_ceil, engine='netcdf4')
     else:
         # Example to show how easy it is to download ARM data if a username/token are set
-        results = act.discovery.download_data(username, token, 'sgpceilC1.b1', '2022-01-14', '2022-01-19')
-        ceil_ds = act.io.armfiles.read_netcdf(results)
+        results = act.discovery.download_arm_data(username, token, 'sgpceilC1.b1', '2022-01-14', '2022-01-19')
+        ceil_ds = act.io.arm.read_arm_netcdf(results)
 
     # Adjust ceilometer data for plotting
     ceil_ds = act.corrections.ceil.correct_ceil(ceil_ds, -9999.0)
@@ -82,7 +84,7 @@ over Oklahoma.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 2.430 seconds)
+   **Total running time of the script:** (0 minutes 3.025 seconds)
 
 
 .. _sphx_glr_download_source_auto_examples_plotting_plot_ceil.py:

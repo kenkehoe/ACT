@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Plot AERIoe data with cloud base height from ceilometer &#8212; Atmospheric data Community Toolkit 0.post1+g4bf0e1e documentation</title>
+    <title>Plot AERIoe data with cloud base height from ceilometer &#8212; Atmospheric data Community Toolkit 0.post1+g42ee209 documentation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -44,7 +44,7 @@
     <script src="../../../_static/doc_shared.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Calculate and plot weighted means" href="plot_weighted_average.html" />
+    <link rel="next" title="Merge multiple datasets" href="plot_merged_product.html" />
     <link rel="prev" title="Plot multiple datasets" href="plot_multiple_dataset.html" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
@@ -296,18 +296,13 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../plotting/plot_sonde.html">
-     Plot a timeseries of sounding data
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../plotting/plot_hist_kwargs.html">
      Plot a histogram of Met data.
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../plotting/plot_rh_timeseries.html">
-     Plot winds and relative humidity from sounding data
+    <a class="reference internal" href="../plotting/plot_sonde.html">
+     Plot a timeseries of sounding data
     </a>
    </li>
    <li class="toctree-l2">
@@ -321,6 +316,21 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../plotting/plot_skewt.html">
+     Skew-T plot of a sounding
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plotting/plot_size_distribution.html">
+     Example Size Distribution Plots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plotting/plot_violin.html">
+     Investigate Temperature Quantiles
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../plotting/plot_multiple_column.html">
      Plot a timeseries of sounding data
     </a>
@@ -331,43 +341,13 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../plotting/plot_skewt.html">
-     Skew-T plot of a sounding
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../plotting/plot_days.html">
-     Calculate and plot wind rose plots separated by day.
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../plotting/plot_wind_rose.html">
-     Windrose and windbarb timeseries plot
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../plotting/plot_heatmap.html">
-     Example plot using heat maps
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../plotting/plot_size_distribution.html">
-     Example Size Distribution Plots
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../plotting/plot_contour.html">
-     Spatial contour plot
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../plotting/plot_ceil.html">
      Simple plot of 2D data
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../plotting/plot_violin.html">
-     Investigate Temperature Quantiles
+    <a class="reference internal" href="../plotting/plot_days.html">
+     Calculate and plot wind rose plots separated by day.
     </a>
    </li>
    <li class="toctree-l2">
@@ -381,13 +361,23 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../plotting/plot_heatmap.html">
+     Example plot using heat maps
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plotting/plot_secondary_y.html">
+     Secondary Y-Axis Plotting
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../plotting/plot_skewt_with_text.html">
      Skew-T plot of a sounding
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../plotting/plot_data_rose.html">
-     Data rose plot
+    <a class="reference internal" href="../plotting/plot_contour.html">
+     Spatial contour plot
     </a>
    </li>
    <li class="toctree-l2">
@@ -396,8 +386,23 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../plotting/plot_data_rose.html">
+     Data rose plot
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plotting/plot_rh_timeseries.html">
+     Plot winds and relative humidity from sounding data
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../plotting/plot_presentweathercode.html">
      Plot Present Weather Code
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../plotting/plot_wind_rose.html">
+     Windrose and windbarb timeseries plot
     </a>
    </li>
    <li class="toctree-l2">
@@ -519,13 +524,13 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="plot_weighted_average.html">
-     Calculate and plot weighted means
+    <a class="reference internal" href="plot_merged_product.html">
+     Merge multiple datasets
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="plot_merged_product.html">
-     Merge multiple datasets
+    <a class="reference internal" href="plot_weighted_average.html">
+     Calculate and plot weighted means
     </a>
    </li>
   </ul>
@@ -591,10 +596,10 @@ ceilometer cloud base height(cbh).</p>
 <span class="k">if</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">username</span></a> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">token</span></a> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">username</span></a><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">token</span></a><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
     <span class="k">pass</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="n">results</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">discovery</span><span class="o">.</span><span class="n">download_data</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">username</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">token</span></a><span class="p">,</span> <span class="s1">&#39;sgpaerioe1turnC1.c1&#39;</span><span class="p">,</span> <span class="s1">&#39;2022-02-11&#39;</span><span class="p">,</span> <span class="s1">&#39;2022-02-11&#39;</span><span class="p">)</span>
-    <span class="n">aerioe_ds</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">armfiles</span><span class="o">.</span><span class="n">read_netcdf</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
-    <span class="n">results</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">discovery</span><span class="o">.</span><span class="n">download_data</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">username</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">token</span></a><span class="p">,</span> <span class="s1">&#39;sgpceilC1.b1&#39;</span><span class="p">,</span> <span class="s1">&#39;2022-02-11&#39;</span><span class="p">,</span> <span class="s1">&#39;2022-02-11&#39;</span><span class="p">)</span>
-    <span class="n">ceil_ds</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">armfiles</span><span class="o">.</span><span class="n">read_netcdf</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">discovery</span><span class="o">.</span><span class="n">download_arm_data</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">username</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">token</span></a><span class="p">,</span> <span class="s1">&#39;sgpaerioe1turnC1.c1&#39;</span><span class="p">,</span> <span class="s1">&#39;2022-02-11&#39;</span><span class="p">,</span> <span class="s1">&#39;2022-02-11&#39;</span><span class="p">)</span>
+    <span class="n">aerioe_ds</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">arm</span><span class="o">.</span><span class="n">read_arm_netcdf</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">discovery</span><span class="o">.</span><span class="n">download_arm_data</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">username</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">token</span></a><span class="p">,</span> <span class="s1">&#39;sgpceilC1.b1&#39;</span><span class="p">,</span> <span class="s1">&#39;2022-02-11&#39;</span><span class="p">,</span> <span class="s1">&#39;2022-02-11&#39;</span><span class="p">)</span>
+    <span class="n">ceil_ds</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">arm</span><span class="o">.</span><span class="n">read_arm_netcdf</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
 
     <span class="c1"># There isn&#39;t information content from the AERI above 3 km</span>
     <span class="c1"># Remove data with a height above 3 km</span>
@@ -659,10 +664,10 @@ ceilometer cloud base height(cbh).</p>
             <p class="prev-next-title">Plot multiple datasets</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="plot_weighted_average.html" title="next page">
+    <a class='right-next' id="next-link" href="plot_merged_product.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Calculate and plot weighted means</p>
+        <p class="prev-next-title">Merge multiple datasets</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
