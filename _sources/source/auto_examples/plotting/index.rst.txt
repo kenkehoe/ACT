@@ -103,23 +103,6 @@ Examples showing different ways to visualize your data.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to make a Skew-T plot from a sounding and calculate stability indicies.">
-
-.. only:: html
-
-  .. image:: /source/auto_examples/plotting/images/thumb/sphx_glr_plot_skewt_thumb.png
-    :alt:
-
-  :ref:`sphx_glr_source_auto_examples_plotting_plot_skewt.py`
-
-.. raw:: html
-
-      <div class="sphx-glr-thumbnail-title">Skew-T plot of a sounding</div>
-    </div>
-
-
-.. raw:: html
-
     <div class="sphx-glr-thumbcontainer" tooltip="Example shows how to plot up CCN droplet count in a size distribution plot.  Also shows how to ...">
 
 .. only:: html
@@ -137,6 +120,23 @@ Examples showing different ways to visualize your data.
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to make a Skew-T plot from a sounding and calculate stability indicies.">
+
+.. only:: html
+
+  .. image:: /source/auto_examples/plotting/images/thumb/sphx_glr_plot_skewt_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_source_auto_examples_plotting_plot_skewt.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Skew-T plot of a sounding</div>
+    </div>
+
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="Investigate Temperature Quantiles using DistributionDisplay Violin Plots">
 
 .. only:: html
@@ -149,6 +149,23 @@ Examples showing different ways to visualize your data.
 .. raw:: html
 
       <div class="sphx-glr-thumbnail-title">Investigate Temperature Quantiles</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to plot on the secondary y-axis using Matplotlib functionality.  The sec...">
+
+.. only:: html
+
+  .. image:: /source/auto_examples/plotting/images/thumb/sphx_glr_plot_secondary_y_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_source_auto_examples_plotting_plot_secondary_y.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Secondary Y-Axis Plotting</div>
     </div>
 
 
@@ -268,23 +285,6 @@ Examples showing different ways to visualize your data.
 .. raw:: html
 
       <div class="sphx-glr-thumbnail-title">Example plot using heat maps</div>
-    </div>
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="This example shows how to use the new capability to plot on the secondary y-axis. Previous vers...">
-
-.. only:: html
-
-  .. image:: /source/auto_examples/plotting/images/thumb/sphx_glr_plot_secondary_y_thumb.png
-    :alt:
-
-  :ref:`sphx_glr_source_auto_examples_plotting_plot_secondary_y.py`
-
-.. raw:: html
-
-      <div class="sphx-glr-thumbnail-title">Secondary Y-Axis Plotting</div>
     </div>
 
 
@@ -437,9 +437,10 @@ Examples showing different ways to visualize your data.
    /source/auto_examples/plotting/plot_sonde
    /source/auto_examples/plotting/plot_aaf_track
    /source/auto_examples/plotting/plot_qc
-   /source/auto_examples/plotting/plot_skewt
    /source/auto_examples/plotting/plot_size_distribution
+   /source/auto_examples/plotting/plot_skewt
    /source/auto_examples/plotting/plot_violin
+   /source/auto_examples/plotting/plot_secondary_y
    /source/auto_examples/plotting/plot_multiple_column
    /source/auto_examples/plotting/plot_daytime_averages
    /source/auto_examples/plotting/plot_ceil
@@ -447,7 +448,6 @@ Examples showing different ways to visualize your data.
    /source/auto_examples/plotting/plot_examples
    /source/auto_examples/plotting/plot_xsection
    /source/auto_examples/plotting/plot_heatmap
-   /source/auto_examples/plotting/plot_secondary_y
    /source/auto_examples/plotting/plot_skewt_with_text
    /source/auto_examples/plotting/plot_contour
    /source/auto_examples/plotting/plot_scatter

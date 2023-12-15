@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>act.plotting.SkewTDisplay.plot_from_u_and_v &#8212; Atmospheric data Community Toolkit 0.post1+g42ee209 documentation</title>
+    <title>act.plotting.SkewTDisplay.plot_from_u_and_v &#8212; Atmospheric data Community Toolkit 0.post1+g23dc947 documentation</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -423,6 +423,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="act.io.read_psl_radar_fmcw_moment.html">
      act.io.read_psl_radar_fmcw_moment
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="act.io.read_psl_surface_met.html">
+     act.io.read_psl_surface_met
     </a>
    </li>
    <li class="toctree-l2">
@@ -1247,6 +1252,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="act.retrievals.calculate_pbl_heffter.html">
+     act.retrievals.calculate_pbl_heffter
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="act.retrievals.calculate_pbl_liu_liang.html">
      act.retrievals.calculate_pbl_liu_liang
     </a>
@@ -1311,6 +1321,68 @@
      <li class="toctree-l3">
       <a class="reference internal" href="act.utils.ChangeUnits.change_units.html">
        act.utils.ChangeUnits.change_units
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="act.utils.DatastreamParserARM.html">
+     act.utils.DatastreamParserARM
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+    <label for="toctree-checkbox-20">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="act.utils.DatastreamParserARM.set_datastream.html">
+       act.utils.DatastreamParserARM.set_datastream
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="act.utils.DatastreamParserARM.datastream.html">
+       act.utils.DatastreamParserARM.datastream
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="act.utils.DatastreamParserARM.datastream_class.html">
+       act.utils.DatastreamParserARM.datastream_class
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="act.utils.DatastreamParserARM.datastream_standard.html">
+       act.utils.DatastreamParserARM.datastream_standard
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="act.utils.DatastreamParserARM.date.html">
+       act.utils.DatastreamParserARM.date
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="act.utils.DatastreamParserARM.ext.html">
+       act.utils.DatastreamParserARM.ext
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="act.utils.DatastreamParserARM.facility.html">
+       act.utils.DatastreamParserARM.facility
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="act.utils.DatastreamParserARM.level.html">
+       act.utils.DatastreamParserARM.level
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="act.utils.DatastreamParserARM.site.html">
+       act.utils.DatastreamParserARM.site
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="act.utils.DatastreamParserARM.time.html">
+       act.utils.DatastreamParserARM.time
       </a>
      </li>
     </ul>
@@ -1529,7 +1601,7 @@
 <h1>act.plotting.SkewTDisplay.plot_from_u_and_v<a class="headerlink" href="#act-plotting-skewtdisplay-plot-from-u-and-v" title="Permalink to this headline">#</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="act.plotting.SkewTDisplay.plot_from_u_and_v">
-<span class="sig-prename descclassname"><span class="pre">SkewTDisplay.</span></span><span class="sig-name descname"><span class="pre">plot_from_u_and_v</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u_field</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_field</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_field</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_field</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">td_field</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dsname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subplot_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0,)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_levels_to_plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_parcel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shade_cape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shade_cin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">set_title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smooth_p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_barbs_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/act/plotting/skewtdisplay.html#SkewTDisplay.plot_from_u_and_v"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#act.plotting.SkewTDisplay.plot_from_u_and_v" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">SkewTDisplay.</span></span><span class="sig-name descname"><span class="pre">plot_from_u_and_v</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u_field</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_field</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_field</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_field</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">td_field</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dsname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subplot_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0,)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_levels_to_plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_parcel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shade_cape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shade_cin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">set_title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smooth_p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_dry_adiabats</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_moist_adiabats</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_mixing_lines</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_barbs_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dry_adiabats_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moist_adiabats_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mixing_lines_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/act/plotting/skewtdisplay.html#SkewTDisplay.plot_from_u_and_v"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#act.plotting.SkewTDisplay.plot_from_u_and_v" title="Permalink to this definition">#</a></dt>
 <dd><p>This function will plot a Skew-T from a sounding dataset. The wind
 data must be given in u and v.</p>
 <dl class="field-list simple">
@@ -1562,6 +1634,9 @@ Default is 3 but inthe pbl retrieval code we have to default to 5 at times</p></
 SkewT.plot_barbs.</p></li>
 <li><p><strong>plot_kwargs</strong> (<em>dict</em>) – Additional keyword arguments to pass into MetPy’s
 SkewT.plot.</p></li>
+<li><p><strong>dry_adiabats_kwargs</strong> (<em>dict</em>) – Additional keyword arguments to pass into MetPy’s plot_dry_adiabats function</p></li>
+<li><p><strong>moist_adiabats_kwargs</strong> (<em>dict</em>) – Additional keyword arguments to pass into MetPy’s plot_moist_adiabats function</p></li>
+<li><p><strong>mixing_lines_kwargs</strong> (<em>dict</em>) – Additional keyword arguments to pass into MetPy’s plot_mixing_lines function</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
