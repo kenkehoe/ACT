@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>act.utils.data_utils &#8212; Atmospheric data Community Toolkit 0.post1+gcb21eb1 documentation</title>
+    <title>act.utils.data_utils &#8212; Atmospheric data Community Toolkit 0.post1+gc32dca1 documentation</title>
     
     <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -40,7 +40,7 @@
     
     <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
   
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=8ee5589c"></script>
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=ff1deb9f"></script>
     <script src="../../../_static/doctools.js?v=888ff710"></script>
     <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -237,7 +237,13 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_ds</span> <span class="o">=</span> <span class="n">ds</span>
 
 <div class="viewcode-block" id="ChangeUnits.change_units"><a class="viewcode-back" href="../../../API/generated/act.utils.ChangeUnits.change_units.html#act.utils.ChangeUnits.change_units">[docs]</a>    <span class="k">def</span> <span class="nf">change_units</span><span class="p">(</span>
-        <span class="bp">self</span><span class="p">,</span> <span class="n">variables</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">desired_unit</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">skip_variables</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">skip_standard</span><span class="o">=</span><span class="kc">True</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">variables</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">desired_unit</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">skip_variables</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">skip_standard</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">raise_error</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Parameters</span>
@@ -253,6 +259,13 @@
 <span class="sd">            Flag indicating the QC variables that will not need changing are</span>
 <span class="sd">            skipped. Makes the processing faster when processing all variables</span>
 <span class="sd">            in dataset.</span>
+<span class="sd">        verbose : boolean</span>
+<span class="sd">            Option to print statement when an attempted conversion fails. Set to False</span>
+<span class="sd">            as default because many units strings are not udunits complient and when</span>
+<span class="sd">            trying to convert all varialbes of a type of units (eg temperature) the code</span>
+<span class="sd">            can print a lot of unecessary information.</span>
+<span class="sd">        raise_error : boolean</span>
+<span class="sd">            Raise an error if conversion is not successful.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
@@ -304,13 +317,21 @@
                 <span class="n">pint</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">UndefinedUnitError</span><span class="p">,</span>
                 <span class="n">np</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">_exceptions</span><span class="o">.</span><span class="n">UFuncTypeError</span><span class="p">,</span>
             <span class="p">):</span>
-                <span class="k">continue</span>
+                <span class="k">if</span> <span class="n">raise_error</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                        <span class="sa">f</span><span class="s2">&quot;Unable to convert &#39;</span><span class="si">{</span><span class="n">var_name</span><span class="si">}</span><span class="s2">&#39; to units of &#39;</span><span class="si">{</span><span class="n">desired_unit</span><span class="si">}</span><span class="s2">&#39;.&quot;</span>
+                    <span class="p">)</span>
+                <span class="k">elif</span> <span class="n">verbose</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span>
+                        <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">    Unable to convert &#39;</span><span class="si">{</span><span class="n">var_name</span><span class="si">}</span><span class="s2">&#39; to units of &#39;</span><span class="si">{</span><span class="n">desired_unit</span><span class="si">}</span><span class="s2">&#39;. &quot;</span>
+                        <span class="sa">f</span><span class="s2">&quot;Skipping unit converstion for &#39;</span><span class="si">{</span><span class="n">var_name</span><span class="si">}</span><span class="s2">&#39;.</span><span class="se">\n</span><span class="s2">&quot;</span>
+                    <span class="p">)</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ds</span></div></div>
 
 
 <span class="c1"># @xr.register_dataset_accessor(&#39;utils&#39;)</span>
-<div class="viewcode-block" id="DatastreamParserARM"><a class="viewcode-back" href="../../../API/generated/act.utils.DatastreamParserARM.html#act.utils.DatastreamParserARM">[docs]</a><span class="k">class</span> <span class="nc">DatastreamParserARM</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="DatastreamParserARM"><a class="viewcode-back" href="../../../API/generated/act.utils.DatastreamParserARM.html#act.utils.DatastreamParserARM">[docs]</a><span class="k">class</span> <span class="nc">DatastreamParserARM</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Class to parse ARM datastream names or filenames into its components.</span>
 <span class="sd">    Will return None for each attribute if not extracted from the filename.</span>
@@ -346,6 +367,7 @@
 
 
 <span class="sd">    &#39;&#39;&#39;</span>
+
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ds</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Constructor that initializes datastream data member and runs</span>
@@ -448,8 +470,7 @@
 <span class="sd">        &#39;&#39;&#39;</span>
 
         <span class="k">try</span><span class="p">:</span>
-            <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">__site</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__class</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__facility</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">,</span>
-                            <span class="bp">self</span><span class="o">.</span><span class="n">__level</span><span class="p">))</span>
+            <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">__site</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__class</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__facility</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__level</span><span class="p">))</span>
         <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
             <span class="k">return</span> <span class="kc">None</span>
 
@@ -505,8 +526,7 @@
 <span class="sd">        &#39;&#39;&#39;</span>
 
         <span class="k">try</span><span class="p">:</span>
-            <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">site</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">datastream_class</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">facility</span><span class="p">,</span>
-                            <span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">level</span><span class="p">))</span>
+            <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">site</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">datastream_class</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">facility</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">level</span><span class="p">))</span>
 
         <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
             <span class="k">return</span> <span class="kc">None</span>
@@ -1189,7 +1209,6 @@
     <span class="n">temp_var_units</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">press_var_units</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
 <span class="p">):</span>
-
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Converts temperature to potential temperature.</span>
 
@@ -1459,9 +1478,7 @@
             <span class="s2">&quot;distinct_facility_code&quot;</span><span class="p">:</span> <span class="p">{</span>
                 <span class="s2">&quot;terms&quot;</span><span class="p">:</span> <span class="p">{</span>
                     <span class="s2">&quot;field&quot;</span><span class="p">:</span> <span class="s2">&quot;facility_code.keyword&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;order&quot;</span><span class="p">:</span> <span class="p">{</span>
-                        <span class="s2">&quot;_key&quot;</span><span class="p">:</span> <span class="s2">&quot;asc&quot;</span>
-                    <span class="p">},</span>
+                    <span class="s2">&quot;order&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;_key&quot;</span><span class="p">:</span> <span class="s2">&quot;asc&quot;</span><span class="p">},</span>
                     <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">7000</span><span class="p">,</span>
                 <span class="p">},</span>
                 <span class="s2">&quot;aggs&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -1473,7 +1490,7 @@
                                 <span class="s2">&quot;facility_code&quot;</span><span class="p">,</span>
                                 <span class="s2">&quot;location&quot;</span><span class="p">,</span>
                             <span class="p">],</span>
-                            <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">1</span>
+                            <span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
                         <span class="p">},</span>
                     <span class="p">},</span>
                 <span class="p">},</span>
@@ -1488,7 +1505,9 @@
     <span class="p">}</span>
 
     <span class="c1"># Uses requests to grab metadata from arm.gov.</span>
-    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://adc.arm.gov/elastic/metadata/_search&#39;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">json_data</span><span class="p">)</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+        <span class="s1">&#39;https://adc.arm.gov/elastic/metadata/_search&#39;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">json_data</span>
+    <span class="p">)</span>
     <span class="c1"># Loads the text to a dictionary</span>
     <span class="n">response_dict</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
 
@@ -1496,19 +1515,19 @@
     <span class="n">coord_dict</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="c1"># Loop through each facility.</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">response_dict</span><span class="p">[</span><span class="s1">&#39;aggregations&#39;</span><span class="p">][</span><span class="s1">&#39;distinct_facility_code&#39;</span><span class="p">][</span><span class="s1">&#39;buckets&#39;</span><span class="p">])):</span>
-        <span class="n">site_info</span> <span class="o">=</span> <span class="n">response_dict</span><span class="p">[</span><span class="s1">&#39;aggregations&#39;</span><span class="p">][</span><span class="s1">&#39;distinct_facility_code&#39;</span><span class="p">][</span><span class="s1">&#39;buckets&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;hits&#39;</span><span class="p">][</span><span class="s1">&#39;hits&#39;</span><span class="p">][</span><span class="s1">&#39;hits&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;_source&#39;</span><span class="p">]</span>
+        <span class="n">site_info</span> <span class="o">=</span> <span class="n">response_dict</span><span class="p">[</span><span class="s1">&#39;aggregations&#39;</span><span class="p">][</span><span class="s1">&#39;distinct_facility_code&#39;</span><span class="p">][</span><span class="s1">&#39;buckets&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;hits&#39;</span><span class="p">][</span>
+            <span class="s1">&#39;hits&#39;</span>
+        <span class="p">][</span><span class="s1">&#39;hits&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;_source&#39;</span><span class="p">]</span>
         <span class="n">site</span> <span class="o">=</span> <span class="n">site_info</span><span class="p">[</span><span class="s1">&#39;site_code&#39;</span><span class="p">]</span>
         <span class="n">facility</span> <span class="o">=</span> <span class="n">site_info</span><span class="p">[</span><span class="s1">&#39;facility_code&#39;</span><span class="p">]</span>
         <span class="c1"># Some sites do not contain coordinate information, return None if that is the case.</span>
         <span class="k">if</span> <span class="n">site_info</span><span class="p">[</span><span class="s1">&#39;location&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">coords</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;latitude&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
-                      <span class="s1">&#39;longitude&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">}</span>
+            <span class="n">coords</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;latitude&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;longitude&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">}</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span> <span class="o">=</span> <span class="n">site_info</span><span class="p">[</span><span class="s1">&#39;location&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
             <span class="n">lat</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">lat</span><span class="p">)</span>
             <span class="n">lon</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">lon</span><span class="p">)</span>
-            <span class="n">coords</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;latitude&#39;</span><span class="p">:</span> <span class="n">lat</span><span class="p">,</span>
-                      <span class="s1">&#39;longitude&#39;</span><span class="p">:</span> <span class="n">lon</span><span class="p">}</span>
+            <span class="n">coords</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;latitude&#39;</span><span class="p">:</span> <span class="n">lat</span><span class="p">,</span> <span class="s1">&#39;longitude&#39;</span><span class="p">:</span> <span class="n">lon</span><span class="p">}</span>
         <span class="n">coord_dict</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="n">site</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">facility</span><span class="p">,</span> <span class="n">coords</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">coord_dict</span></div>
