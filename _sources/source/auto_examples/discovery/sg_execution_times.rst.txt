@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**01:09.437** total execution time for 4 files **from source/auto_examples/discovery**:
+**01:05.385** total execution time for 4 files **from source/auto_examples/discovery**:
 
 .. container::
 
@@ -33,10 +33,10 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_source_auto_examples_discovery_plot_asos_temp.py` (``plot_asos_temp.py``)
-     - 01:01.458
+     - 00:58.132
      - 0.0
    * - :ref:`sphx_glr_source_auto_examples_discovery_plot_noaa_fmcw_moment.py` (``plot_noaa_fmcw_moment.py``)
-     - 00:07.977
+     - 00:07.251
      - 0.0
    * - :ref:`sphx_glr_source_auto_examples_discovery_plot_neon.py` (``plot_neon.py``)
      - 00:00.001
