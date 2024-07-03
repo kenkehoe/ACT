@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:23.432** total execution time for 26 files **from source/auto_examples/plotting**:
+**00:23.497** total execution time for 26 files **from source/auto_examples/plotting**:
 
 .. container::
 
@@ -33,76 +33,76 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_source_auto_examples_plotting_plot_days.py` (``plot_days.py``)
-     - 00:03.405
-     - 0.0
-   * - :ref:`sphx_glr_source_auto_examples_plotting_plot_ceil.py` (``plot_ceil.py``)
-     - 00:02.523
+     - 00:03.495
      - 0.0
    * - :ref:`sphx_glr_source_auto_examples_plotting_plot_data_rose.py` (``plot_data_rose.py``)
-     - 00:02.521
+     - 00:02.614
+     - 0.0
+   * - :ref:`sphx_glr_source_auto_examples_plotting_plot_ceil.py` (``plot_ceil.py``)
+     - 00:02.383
      - 0.0
    * - :ref:`sphx_glr_source_auto_examples_plotting_plot_xsection.py` (``plot_xsection.py``)
-     - 00:01.661
+     - 00:01.455
      - 0.0
    * - :ref:`sphx_glr_source_auto_examples_plotting_plot_wind_rose.py` (``plot_wind_rose.py``)
-     - 00:01.422
+     - 00:01.453
      - 0.0
    * - :ref:`sphx_glr_source_auto_examples_plotting_plot_examples.py` (``plot_examples.py``)
-     - 00:01.402
+     - 00:01.406
      - 0.0
    * - :ref:`sphx_glr_source_auto_examples_plotting_plot_daytime_averages.py` (``plot_daytime_averages.py``)
-     - 00:01.256
+     - 00:01.259
      - 0.0
    * - :ref:`sphx_glr_source_auto_examples_plotting_plot_rh_timeseries.py` (``plot_rh_timeseries.py``)
-     - 00:01.171
+     - 00:01.213
      - 0.0
    * - :ref:`sphx_glr_source_auto_examples_plotting_plot_state_variable.py` (``plot_state_variable.py``)
-     - 00:00.915
+     - 00:00.880
      - 0.0
    * - :ref:`sphx_glr_source_auto_examples_plotting_plot_contour.py` (``plot_contour.py``)
-     - 00:00.737
+     - 00:00.780
      - 0.0
    * - :ref:`sphx_glr_source_auto_examples_plotting_plot_multiple_column.py` (``plot_multiple_column.py``)
-     - 00:00.674
+     - 00:00.701
      - 0.0
    * - :ref:`sphx_glr_source_auto_examples_plotting_plot_aaf_track.py` (``plot_aaf_track.py``)
-     - 00:00.636
+     - 00:00.645
      - 0.0
    * - :ref:`sphx_glr_source_auto_examples_plotting_plot_heatmap.py` (``plot_heatmap.py``)
-     - 00:00.605
+     - 00:00.624
      - 0.0
    * - :ref:`sphx_glr_source_auto_examples_plotting_plot_scatter.py` (``plot_scatter.py``)
-     - 00:00.555
+     - 00:00.590
      - 0.0
    * - :ref:`sphx_glr_source_auto_examples_plotting_plot_skewt.py` (``plot_skewt.py``)
-     - 00:00.544
+     - 00:00.558
      - 0.0
    * - :ref:`sphx_glr_source_auto_examples_plotting_plot_time_height_scatter.py` (``plot_time_height_scatter.py``)
-     - 00:00.488
-     - 0.0
-   * - :ref:`sphx_glr_source_auto_examples_plotting_plot_qc.py` (``plot_qc.py``)
-     - 00:00.474
+     - 00:00.498
      - 0.0
    * - :ref:`sphx_glr_source_auto_examples_plotting_plot_enhanced_skewt.py` (``plot_enhanced_skewt.py``)
-     - 00:00.469
+     - 00:00.487
+     - 0.0
+   * - :ref:`sphx_glr_source_auto_examples_plotting_plot_qc.py` (``plot_qc.py``)
+     - 00:00.480
      - 0.0
    * - :ref:`sphx_glr_source_auto_examples_plotting_plot_violin.py` (``plot_violin.py``)
-     - 00:00.457
+     - 00:00.447
      - 0.0
    * - :ref:`sphx_glr_source_auto_examples_plotting_plot_skewt_with_text.py` (``plot_skewt_with_text.py``)
-     - 00:00.334
+     - 00:00.342
      - 0.0
    * - :ref:`sphx_glr_source_auto_examples_plotting_plot_presentweathercode.py` (``plot_presentweathercode.py``)
-     - 00:00.276
+     - 00:00.278
      - 0.0
    * - :ref:`sphx_glr_source_auto_examples_plotting_plot_size_distribution.py` (``plot_size_distribution.py``)
-     - 00:00.263
+     - 00:00.260
      - 0.0
    * - :ref:`sphx_glr_source_auto_examples_plotting_plot_sonde.py` (``plot_sonde.py``)
-     - 00:00.248
+     - 00:00.247
      - 0.0
    * - :ref:`sphx_glr_source_auto_examples_plotting_plot_secondary_y.py` (``plot_secondary_y.py``)
-     - 00:00.224
+     - 00:00.227
      - 0.0
    * - :ref:`sphx_glr_source_auto_examples_plotting_plot_hist_kwargs.py` (``plot_hist_kwargs.py``)
      - 00:00.096
