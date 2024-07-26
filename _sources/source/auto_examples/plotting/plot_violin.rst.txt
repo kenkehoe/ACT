@@ -109,6 +109,10 @@ Written: Joe O'Brien
 
       :download:`Download Python source code: plot_violin.py <plot_violin.py>`
 
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: plot_violin.zip <plot_violin.zip>`
+
 
 .. only:: html
 

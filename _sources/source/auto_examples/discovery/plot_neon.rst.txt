@@ -110,6 +110,10 @@ on the North Slope and plot them
 
       :download:`Download Python source code: plot_neon.py <plot_neon.py>`
 
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: plot_neon.zip <plot_neon.zip>`
+
 
 .. only:: html
 
