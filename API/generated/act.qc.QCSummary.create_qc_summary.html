@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>act.qc.QCSummary.create_qc_summary &#8212; Atmospheric data Community Toolkit 0.post1+g834c874 documentation</title>
+    <title>act.qc.QCSummary.create_qc_summary &#8212; Atmospheric data Community Toolkit 0.post1+g6b2ce1c documentation</title>
     
     <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -41,7 +41,7 @@
     
     <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
   
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=c27cb0da"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=8eeed692"></script>
     <script src="../../_static/doctools.js?v=888ff710"></script>
     <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -51,8 +51,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="act.qc.QCTests" href="act.qc.QCTests.html" />
-    <link rel="prev" title="act.qc.QCSummary" href="act.qc.QCSummary.html" />
-
+    <link rel="prev" title="act.qc.QCSummary" href="act.qc.QCSummary.html" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -66,17 +65,14 @@
                     gtag('js', new Date());
                     gtag('config', 'G-8YN80YZDD8');
                 </script>
-
-
+ 
 <link
   rel="alternate"
   type="application/atom+xml"
   href="../../blog/atom.xml"
   title="ACT Blog"
 />
-
-
-
+  
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
@@ -274,6 +270,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="act.discovery.get_crop_type.html">
      act.discovery.get_crop_type
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="act.discovery.get_improve_data.html">
+     act.discovery.get_improve_data
     </a>
    </li>
    <li class="toctree-l2">
@@ -1512,6 +1513,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="act.utils.arm_standards_validator.html">
+     act.utils.arm_standards_validator
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="act.utils.assign_coordinates.html">
      act.utils.assign_coordinates
     </a>
@@ -1725,12 +1731,11 @@
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
               <div>
-                
-<section id="act-qc-qcsummary-create-qc-summary">
+                 <section id="act-qc-qcsummary-create-qc-summary">
 <h1>act.qc.QCSummary.create_qc_summary<a class="headerlink" href="#act-qc-qcsummary-create-qc-summary" title="Permalink to this heading">¶</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="act.qc.QCSummary.create_qc_summary">
-<span class="sig-prename descclassname"><span class="pre">QCSummary.</span></span><span class="sig-name descname"><span class="pre">create_qc_summary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cleanup_qc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/act/qc/qc_summary.html#QCSummary.create_qc_summary"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#act.qc.QCSummary.create_qc_summary" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">QCSummary.</span></span><span class="sig-name descname"><span class="pre">create_qc_summary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cleanup_qc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_attrs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['fail_min',</span> <span class="pre">'fail_max',</span> <span class="pre">'fail_delta']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_assessment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/act/qc/qc_summary.html#QCSummary.create_qc_summary"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#act.qc.QCSummary.create_qc_summary" title="Permalink to this definition">¶</a></dt>
 <dd><p>Method to convert embedded quality control to summary QC that utilzes
 flag values instead of flag masks and summarizes the assessments to only
 a few states. Lowest level of quality control will be listed first with most
@@ -1739,6 +1744,10 @@ sever having higher integer numbers. Dataset is updated in place.</p>
 <dt>cleanup_qc<span class="classifier">boolean</span></dt><dd><p>Call clean.cleanup() method to convert to standardized ancillary quality control
 variables. The quality control summary requires the current embedded quality
 control variables to use ACT standards.</p>
+</dd>
+<dt>remove_attrs<span class="classifier">None, list</span></dt><dd><p>Quality Control variable attributes to remove after creating the summary.</p>
+</dd>
+<dt>normalize_assessment<span class="classifier">bool</span></dt><dd><p>Option to clean up assessments to use the same terminology.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -1751,8 +1760,7 @@ control variables to use ACT standards.</p>
 </section>
 
 <div class="section ablog__blog_comments">
-  
-  
+   
 </div>
 
               </div>
