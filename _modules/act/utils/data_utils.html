@@ -15,8 +15,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -26,10 +26,10 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
@@ -41,10 +41,10 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/act-theme.css?v=e2ee527d" />
   
   <!-- So that users can add custom icons -->
-  <script src="../../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=b3ba4146"></script>
     <script src="../../../_static/doctools.js?v=888ff710"></script>
@@ -52,6 +52,13 @@
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../../_static/copybutton.js?v=f281be69"></script>
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-8YN80YZDD8"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-8YN80YZDD8');
+            </script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_modules/act/utils/data_utils';</script>
     <script src="../../../_static/doc_shared.js?v=4c9803b4"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -176,7 +183,9 @@
 </li>
 
             <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
@@ -358,9 +367,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -411,19 +425,19 @@
 
 <span class="sd">&quot;&quot;&quot;</span>
 
-<span class="kn">import</span> <span class="nn">importlib</span>
-<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">importlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
 
-<span class="kn">import</span> <span class="nn">json</span>
-<span class="kn">import</span> <span class="nn">metpy</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pint</span>
-<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
-<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
-<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
-<span class="kn">import</span> <span class="nn">re</span>
-<span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">PathLike</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">metpy</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pint</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">stats</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">os</span><span class="w"> </span><span class="kn">import</span> <span class="n">PathLike</span>
 
 <span class="n">spec</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">find_spec</span><span class="p">(</span><span class="s1">&#39;pyart&#39;</span><span class="p">)</span>
 <span class="k">if</span> <span class="n">spec</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -433,17 +447,17 @@
 
 
 <div class="viewcode-block" id="ChangeUnits"><a class="viewcode-back" href="../../../API/generated/act.utils.ChangeUnits.html#act.utils.ChangeUnits">[docs]</a><span class="nd">@xr</span><span class="o">.</span><span class="n">register_dataset_accessor</span><span class="p">(</span><span class="s1">&#39;utils&#39;</span><span class="p">)</span>
-<span class="k">class</span> <span class="nc">ChangeUnits</span><span class="p">:</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">ChangeUnits</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Class for updating units in the dataset. Data values and units attribute</span>
 <span class="sd">    are updated in place. Coordinate variables can not be updated in place. Must</span>
 <span class="sd">    use new returned dataset when updating coordinage varibles.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ds</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ds</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_ds</span> <span class="o">=</span> <span class="n">ds</span>
 
-<div class="viewcode-block" id="ChangeUnits.change_units"><a class="viewcode-back" href="../../../API/generated/act.utils.ChangeUnits.change_units.html#act.utils.ChangeUnits.change_units">[docs]</a>    <span class="k">def</span> <span class="nf">change_units</span><span class="p">(</span>
+<div class="viewcode-block" id="ChangeUnits.change_units"><a class="viewcode-back" href="../../../API/generated/act.utils.ChangeUnits.change_units.html#act.utils.ChangeUnits.change_units">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">change_units</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">variables</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
         <span class="n">desired_unit</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -539,7 +553,7 @@
 
 
 <span class="c1"># @xr.register_dataset_accessor(&#39;utils&#39;)</span>
-<div class="viewcode-block" id="DatastreamParserARM"><a class="viewcode-back" href="../../../API/generated/act.utils.DatastreamParserARM.html#act.utils.DatastreamParserARM">[docs]</a><span class="k">class</span> <span class="nc">DatastreamParserARM</span><span class="p">:</span>
+<div class="viewcode-block" id="DatastreamParserARM"><a class="viewcode-back" href="../../../API/generated/act.utils.DatastreamParserARM.html#act.utils.DatastreamParserARM">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">DatastreamParserARM</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Class to parse ARM datastream names or filenames into its components.</span>
 <span class="sd">    Will return None for each attribute if not extracted from the filename.</span>
@@ -576,7 +590,7 @@
 
 <span class="sd">    &#39;&#39;&#39;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ds</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ds</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Constructor that initializes datastream data member and runs</span>
 <span class="sd">        parse_datastream class method.  Also converts datastream name to</span>
@@ -603,7 +617,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">__time</span> <span class="o">=</span> <span class="kc">None</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">__ext</span> <span class="o">=</span> <span class="kc">None</span>
 
-    <span class="k">def</span> <span class="nf">__parse_datastream</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">__parse_datastream</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Private method to parse datastream name into its various components</span>
 <span class="sd">        (site, class, facility, and data level.  Is called automatically by</span>
@@ -661,7 +675,7 @@
         <span class="k">if</span> <span class="ow">not</span> <span class="n">match</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__datastream</span><span class="p">)</span>
 
-<div class="viewcode-block" id="DatastreamParserARM.set_datastream"><a class="viewcode-back" href="../../../API/generated/act.utils.DatastreamParserARM.set_datastream.html#act.utils.DatastreamParserARM.set_datastream">[docs]</a>    <span class="k">def</span> <span class="nf">set_datastream</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ds</span><span class="p">):</span>
+<div class="viewcode-block" id="DatastreamParserARM.set_datastream"><a class="viewcode-back" href="../../../API/generated/act.utils.DatastreamParserARM.set_datastream.html#act.utils.DatastreamParserARM.set_datastream">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">set_datastream</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ds</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Method used to set or reset object by passing a new datastream name.</span>
 
@@ -670,7 +684,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span></div>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">datastream</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">datastream</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Property returning current datastream name stored in object in</span>
 <span class="sd">        standard lower case.  Will return the datastrem with no level if</span>
@@ -684,7 +698,7 @@
             <span class="k">return</span> <span class="kc">None</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">site</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">site</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Property returning current site name stored in object in standard</span>
 <span class="sd">        lower case.</span>
@@ -694,7 +708,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__site</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">datastream_class</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">datastream_class</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Property returning current datastream class name stored in object in</span>
 <span class="sd">        standard lower case.  Could not use class as attribute name since it</span>
@@ -705,7 +719,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__class</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">facility</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">facility</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Property returning current facility name stored in object in</span>
 <span class="sd">        standard upper case.</span>
@@ -718,7 +732,7 @@
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__facility</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">level</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">level</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Property returning current data level stored in object in standard</span>
 <span class="sd">        lower case.</span>
@@ -727,7 +741,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__level</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">datastream_standard</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">datastream_standard</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Property returning datastream name in ARM-standard format with</span>
 <span class="sd">        facility in caps.  Will return the datastream name with no level if</span>
@@ -741,7 +755,7 @@
             <span class="k">return</span> <span class="kc">None</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">date</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">date</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Property returning date from filename.</span>
 <span class="sd">        &#39;&#39;&#39;</span>
@@ -749,7 +763,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__date</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">time</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">time</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Property returning time from filename.</span>
 <span class="sd">        &#39;&#39;&#39;</span>
@@ -757,7 +771,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__time</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">ext</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">ext</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">        Property returning file extension from filename.</span>
 <span class="sd">        &#39;&#39;&#39;</span>
@@ -765,7 +779,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__ext</span></div>
 
 
-<div class="viewcode-block" id="assign_coordinates"><a class="viewcode-back" href="../../../API/generated/act.utils.assign_coordinates.html#act.utils.assign_coordinates">[docs]</a><span class="k">def</span> <span class="nf">assign_coordinates</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">coord_list</span><span class="p">):</span>
+<div class="viewcode-block" id="assign_coordinates"><a class="viewcode-back" href="../../../API/generated/act.utils.assign_coordinates.html#act.utils.assign_coordinates">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">assign_coordinates</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">coord_list</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This procedure will create a new ACT dataset whose coordinates are</span>
 <span class="sd">    designated to be the variables in a given list. This helps make data</span>
@@ -815,7 +829,7 @@
     <span class="k">return</span> <span class="n">new_ds</span></div>
 
 
-<div class="viewcode-block" id="add_in_nan"><a class="viewcode-back" href="../../../API/generated/act.utils.add_in_nan.html#act.utils.add_in_nan">[docs]</a><span class="k">def</span> <span class="nf">add_in_nan</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<div class="viewcode-block" id="add_in_nan"><a class="viewcode-back" href="../../../API/generated/act.utils.add_in_nan.html#act.utils.add_in_nan">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">add_in_nan</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This procedure adds in NaNs when there is a larger than expected time step.</span>
 <span class="sd">    This is useful for timeseries where there is a gap in data and need a</span>
@@ -903,7 +917,7 @@
     <span class="k">return</span> <span class="n">time</span><span class="p">,</span> <span class="n">data</span></div>
 
 
-<div class="viewcode-block" id="get_missing_value"><a class="viewcode-back" href="../../../API/generated/act.utils.get_missing_value.html#act.utils.get_missing_value">[docs]</a><span class="k">def</span> <span class="nf">get_missing_value</span><span class="p">(</span>
+<div class="viewcode-block" id="get_missing_value"><a class="viewcode-back" href="../../../API/generated/act.utils.get_missing_value.html#act.utils.get_missing_value">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">get_missing_value</span><span class="p">(</span>
     <span class="n">ds</span><span class="p">,</span>
     <span class="n">variable</span><span class="p">,</span>
     <span class="n">default</span><span class="o">=-</span><span class="mi">9999</span><span class="p">,</span>
@@ -1001,7 +1015,7 @@
     <span class="k">return</span> <span class="n">missing</span></div>
 
 
-<div class="viewcode-block" id="convert_units"><a class="viewcode-back" href="../../../API/generated/act.utils.convert_units.html#act.utils.convert_units">[docs]</a><span class="k">def</span> <span class="nf">convert_units</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">in_units</span><span class="p">,</span> <span class="n">out_units</span><span class="p">):</span>
+<div class="viewcode-block" id="convert_units"><a class="viewcode-back" href="../../../API/generated/act.utils.convert_units.html#act.utils.convert_units">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">convert_units</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">in_units</span><span class="p">,</span> <span class="n">out_units</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Wrapper function around library to convert data using unit strings.</span>
 <span class="sd">    Currently using pint units library. Will attempt to preserve numpy</span>
@@ -1081,7 +1095,7 @@
     <span class="k">return</span> <span class="n">data</span></div>
 
 
-<div class="viewcode-block" id="ts_weighted_average"><a class="viewcode-back" href="../../../API/generated/act.utils.ts_weighted_average.html#act.utils.ts_weighted_average">[docs]</a><span class="k">def</span> <span class="nf">ts_weighted_average</span><span class="p">(</span><span class="n">ts_dict</span><span class="p">):</span>
+<div class="viewcode-block" id="ts_weighted_average"><a class="viewcode-back" href="../../../API/generated/act.utils.ts_weighted_average.html#act.utils.ts_weighted_average">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">ts_weighted_average</span><span class="p">(</span><span class="n">ts_dict</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Program to take in multiple difference time-series and average them</span>
 <span class="sd">    using the weights provided. This assumes that the variables passed in</span>
@@ -1157,7 +1171,7 @@
     <span class="k">return</span> <span class="n">da_xr</span></div>
 
 
-<div class="viewcode-block" id="accumulate_precip"><a class="viewcode-back" href="../../../API/generated/act.utils.accumulate_precip.html#act.utils.accumulate_precip">[docs]</a><span class="k">def</span> <span class="nf">accumulate_precip</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">variable</span><span class="p">,</span> <span class="n">time_delta</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="accumulate_precip"><a class="viewcode-back" href="../../../API/generated/act.utils.accumulate_precip.html#act.utils.accumulate_precip">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">accumulate_precip</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">variable</span><span class="p">,</span> <span class="n">time_delta</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Program to accumulate rain rates from an act xarray dataset and insert</span>
 <span class="sd">    variable back into an act xarray dataset with &quot;_accumulated&quot; appended to</span>
@@ -1212,7 +1226,7 @@
     <span class="k">return</span> <span class="n">ds</span></div>
 
 
-<div class="viewcode-block" id="create_pyart_obj"><a class="viewcode-back" href="../../../API/generated/act.utils.create_pyart_obj.html#act.utils.create_pyart_obj">[docs]</a><span class="k">def</span> <span class="nf">create_pyart_obj</span><span class="p">(</span>
+<div class="viewcode-block" id="create_pyart_obj"><a class="viewcode-back" href="../../../API/generated/act.utils.create_pyart_obj.html#act.utils.create_pyart_obj">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">create_pyart_obj</span><span class="p">(</span>
     <span class="n">ds</span><span class="p">,</span>
     <span class="n">variables</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">sweep</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -1278,7 +1292,7 @@
             <span class="s1">&#39;Py-ART needs to be installed on your system to convert to &#39;</span> <span class="s1">&#39;Py-ART Object.&#39;</span>
         <span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="kn">import</span> <span class="nn">pyart</span>
+        <span class="kn">import</span><span class="w"> </span><span class="nn">pyart</span>
     <span class="c1"># Get list of variables if none provided</span>
     <span class="k">if</span> <span class="n">variables</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">variables</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
@@ -1415,7 +1429,7 @@
     <span class="k">return</span> <span class="n">radar</span></div>
 
 
-<div class="viewcode-block" id="convert_to_potential_temp"><a class="viewcode-back" href="../../../API/generated/act.utils.convert_to_potential_temp.html#act.utils.convert_to_potential_temp">[docs]</a><span class="k">def</span> <span class="nf">convert_to_potential_temp</span><span class="p">(</span>
+<div class="viewcode-block" id="convert_to_potential_temp"><a class="viewcode-back" href="../../../API/generated/act.utils.convert_to_potential_temp.html#act.utils.convert_to_potential_temp">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">convert_to_potential_temp</span><span class="p">(</span>
     <span class="n">ds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">temp_var_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">press_var_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -1496,7 +1510,7 @@
     <span class="k">return</span> <span class="n">potential_temp</span></div>
 
 
-<div class="viewcode-block" id="height_adjusted_temperature"><a class="viewcode-back" href="../../../API/generated/act.utils.height_adjusted_temperature.html#act.utils.height_adjusted_temperature">[docs]</a><span class="k">def</span> <span class="nf">height_adjusted_temperature</span><span class="p">(</span>
+<div class="viewcode-block" id="height_adjusted_temperature"><a class="viewcode-back" href="../../../API/generated/act.utils.height_adjusted_temperature.html#act.utils.height_adjusted_temperature">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">height_adjusted_temperature</span><span class="p">(</span>
     <span class="n">ds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">temp_var_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">height_difference</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
@@ -1590,7 +1604,7 @@
     <span class="k">return</span> <span class="n">adjusted_temperature</span></div>
 
 
-<div class="viewcode-block" id="height_adjusted_pressure"><a class="viewcode-back" href="../../../API/generated/act.utils.height_adjusted_pressure.html#act.utils.height_adjusted_pressure">[docs]</a><span class="k">def</span> <span class="nf">height_adjusted_pressure</span><span class="p">(</span>
+<div class="viewcode-block" id="height_adjusted_pressure"><a class="viewcode-back" href="../../../API/generated/act.utils.height_adjusted_pressure.html#act.utils.height_adjusted_pressure">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">height_adjusted_pressure</span><span class="p">(</span>
     <span class="n">ds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">press_var_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">height_difference</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
@@ -1659,7 +1673,7 @@
     <span class="k">return</span> <span class="n">adjusted_pressure</span></div>
 
 
-<div class="viewcode-block" id="arm_site_location_search"><a class="viewcode-back" href="../../../API/generated/act.utils.arm_site_location_search.html#act.utils.arm_site_location_search">[docs]</a><span class="k">def</span> <span class="nf">arm_site_location_search</span><span class="p">(</span><span class="n">site_code</span><span class="o">=</span><span class="s1">&#39;sgp&#39;</span><span class="p">,</span> <span class="n">facility_code</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="arm_site_location_search"><a class="viewcode-back" href="../../../API/generated/act.utils.arm_site_location_search.html#act.utils.arm_site_location_search">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">arm_site_location_search</span><span class="p">(</span><span class="n">site_code</span><span class="o">=</span><span class="s1">&#39;sgp&#39;</span><span class="p">,</span> <span class="n">facility_code</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -1748,7 +1762,7 @@
     <span class="k">return</span> <span class="n">coord_dict</span></div>
 
 
-<div class="viewcode-block" id="calculate_percentages"><a class="viewcode-back" href="../../../API/generated/act.utils.calculate_percentages.html#act.utils.calculate_percentages">[docs]</a><span class="k">def</span> <span class="nf">calculate_percentages</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">fields</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">time_slice</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="mf">0.0</span><span class="p">):</span>
+<div class="viewcode-block" id="calculate_percentages"><a class="viewcode-back" href="../../../API/generated/act.utils.calculate_percentages.html#act.utils.calculate_percentages">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">calculate_percentages</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">fields</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">time_slice</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="mf">0.0</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This function calculates percentages of different fields of a dataset.</span>
 
@@ -1821,7 +1835,7 @@
     <span class="k">return</span> <span class="n">percentages</span></div>
 
 
-<div class="viewcode-block" id="convert_2d_to_1d"><a class="viewcode-back" href="../../../API/generated/act.utils.convert_2d_to_1d.html#act.utils.convert_2d_to_1d">[docs]</a><span class="k">def</span> <span class="nf">convert_2d_to_1d</span><span class="p">(</span>
+<div class="viewcode-block" id="convert_2d_to_1d"><a class="viewcode-back" href="../../../API/generated/act.utils.convert_2d_to_1d.html#act.utils.convert_2d_to_1d">[docs]</a><span class="k">def</span><span class="w"> </span><span class="nf">convert_2d_to_1d</span><span class="p">(</span>
     <span class="n">ds</span><span class="p">,</span>
     <span class="n">parse</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">variables</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -1962,8 +1976,8 @@
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1996,7 +2010,8 @@
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

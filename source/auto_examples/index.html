@@ -16,8 +16,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -27,10 +27,10 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
@@ -42,10 +42,10 @@
     <link rel="stylesheet" type="text/css" href="../../_static/act-theme.css?v=e2ee527d" />
   
   <!-- So that users can add custom icons -->
-  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=b3ba4146"></script>
     <script src="../../_static/doctools.js?v=888ff710"></script>
@@ -53,6 +53,13 @@
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=f281be69"></script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-8YN80YZDD8"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-8YN80YZDD8');
+            </script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'source/auto_examples/index';</script>
     <script src="../../_static/doc_shared.js?v=4c9803b4"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -179,7 +186,9 @@
 </li>
 
             <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
@@ -424,6 +433,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="qc/index.html">Quality Control Examples</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="qc/plot_dqr_qc.html">Query the ARM DQR webservice</a></li>
 <li class="toctree-l2"><a class="reference internal" href="qc/plot_force_line_qc.html">Forcing line plots with 2D data and QC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qc/plot_qc_step_change.html">Plotting flagged data gaps with a step change test</a></li>
 <li class="toctree-l2"><a class="reference internal" href="qc/plot_qc_bsrn.html">Plotting Baseline Surface Radiation Network (BSRN) QC Flags</a></li>
 <li class="toctree-l2"><a class="reference internal" href="qc/plot_qc_example.html">Working with embedded quality control variables</a></li>
 <li class="toctree-l2"><a class="reference internal" href="qc/plot_arm_qc.html">Working with and expanding embedded quality control variables</a></li>
@@ -447,6 +457,7 @@
 <li class="toctree-l2"><a class="reference internal" href="workflows/plot_aerioe_with_cbh.html">Plot AERIoe data with cloud base height from ceilometer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="workflows/plot_weighted_average.html">Calculate and plot weighted means</a></li>
 <li class="toctree-l2"><a class="reference internal" href="workflows/plot_merged_product.html">Merge multiple datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workflows/plot_courage_comparison.html">Consolidation of CoURAGE Data Sources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="workflows/plot_amf3_comparisons.html">Consolidation of Data Sources</a></li>
 </ul>
 </details></li>
@@ -457,9 +468,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -662,16 +678,16 @@ template can be found <a class="reference external" href="https://github.com/ARM
 </div><div class="sphx-glr-thumbcontainer" tooltip="This is an example of how to use 2 dimentional DataArrays containing multiple 1 dimentional data, including a summary quality control plot showing the tests for each 1 dimentional data slice. This example uses the force_line_plot keyword which will force multiple 1 dimentional plots for each element along the second dimention of the non-time dimention."><img alt="" src="../../_images/sphx_glr_plot_force_line_qc_thumb.png" />
 <p><a class="reference internal" href="qc/plot_force_line_qc.html#sphx-glr-source-auto-examples-qc-plot-force-line-qc-py"><span class="std std-ref">Forcing line plots with 2D data and QC</span></a></p>
   <div class="sphx-glr-thumbnail-title">Forcing line plots with 2D data and QC</div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="This is an example for how to use the step change detection test."><img alt="" src="../../_images/sphx_glr_plot_qc_step_change_thumb.png" />
-<p><span class="xref std std-ref">sphx_glr_source_auto_examples_qc_plot_qc_step_change.py</span></p>
-  <div class="sphx-glr-thumbnail-title">This is an example for how to use the step change detection test.</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="This is an example for how to use the step change detection test. The test uses the cumulative sum control chart to detect when a sudden shift in values occurs. It has an option to insert NaN value when there is a data gap to not have those periods returned as a data shift. This example produces two plots, one with the data gap flagged and one without."><img alt="" src="../../_images/sphx_glr_plot_qc_step_change_thumb.png" />
+<p><a class="reference internal" href="qc/plot_qc_step_change.html#sphx-glr-source-auto-examples-qc-plot-qc-step-change-py"><span class="std std-ref">Plotting flagged data gaps with a step change test</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Plotting flagged data gaps with a step change test</div>
 </div><div class="sphx-glr-thumbcontainer" tooltip="Simple example for applying BSRN QC and plotting the data and the corresponding QC flags using colorblind friendly colors. https://bsrn.awi.de/data/quality-checks/"><img alt="" src="../../_images/sphx_glr_plot_qc_bsrn_thumb.png" />
 <p><a class="reference internal" href="qc/plot_qc_bsrn.html#sphx-glr-source-auto-examples-qc-plot-qc-bsrn-py"><span class="std std-ref">Plotting Baseline Surface Radiation Network (BSRN) QC Flags</span></a></p>
   <div class="sphx-glr-thumbnail-title">Plotting Baseline Surface Radiation Network (BSRN) QC Flags</div>
 </div><div class="sphx-glr-thumbcontainer" tooltip="This is an example of how to use existing or create new quality control varibles. All the tests are located in act/qc/qctests.py file but called under the qcfilter method."><img alt="" src="../../_images/sphx_glr_plot_qc_example_thumb.png" />
 <p><a class="reference internal" href="qc/plot_qc_example.html#sphx-glr-source-auto-examples-qc-plot-qc-example-py"><span class="std std-ref">Working with embedded quality control variables</span></a></p>
   <div class="sphx-glr-thumbnail-title">Working with embedded quality control variables</div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="This is an example of how to use existing or create new quality control varibles and extend the quality control flagging. The anicllary quality control variable can be expanded by integrating external Data Quality Reports, adding additional generic ACT tests, instrument specific ACT tests, or reading a configuraiton file of known failures to clean up the data variable."><img alt="" src="../../_images/sphx_glr_plot_arm_qc_thumb.png" />
+</div><div class="sphx-glr-thumbcontainer" tooltip="This is an example of how to use existing or create new quality control variables and extend the quality control flagging. The anicllary quality control variable can be expanded by integrating external Data Quality Reports, adding additional generic ACT tests, instrument specific ACT tests, or reading a configuration file of known failures to clean up the data variable."><img alt="" src="../../_images/sphx_glr_plot_arm_qc_thumb.png" />
 <p><a class="reference internal" href="qc/plot_arm_qc.html#sphx-glr-source-auto-examples-qc-plot-arm-qc-py"><span class="std std-ref">Working with and expanding embedded quality control variables</span></a></p>
   <div class="sphx-glr-thumbnail-title">Working with and expanding embedded quality control variables</div>
 </div></div></section>
@@ -719,6 +735,9 @@ template can be found <a class="reference external" href="https://github.com/ARM
 </div><div class="sphx-glr-thumbcontainer" tooltip="Example to merge multiple data products into one using ACT. Shows how to adjust the timestamp if the timestamps are at different part of the sample interval (left, right, center). Also shows how to apply QC information, merge and resample data using xarray and plot/write out the results."><img alt="" src="../../_images/sphx_glr_plot_merged_product_thumb.png" />
 <p><a class="reference internal" href="workflows/plot_merged_product.html#sphx-glr-source-auto-examples-workflows-plot-merged-product-py"><span class="std std-ref">Merge multiple datasets</span></a></p>
   <div class="sphx-glr-thumbnail-title">Merge multiple datasets</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="This example shows how to use ACT to combine multiple datasets to support ARM&#x27;s CoURAGE deployment in Baltimore, MD.  Example uses ARM, EPA, and ASOS data."><img alt="" src="../../_images/sphx_glr_plot_courage_comparison_thumb.png" />
+<p><a class="reference internal" href="workflows/plot_courage_comparison.html#sphx-glr-source-auto-examples-workflows-plot-courage-comparison-py"><span class="std std-ref">Consolidation of CoURAGE Data Sources</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Consolidation of CoURAGE Data Sources</div>
 </div><div class="sphx-glr-thumbcontainer" tooltip="This example shows how to use ACT to combine multiple datasets to support ARM&#x27;s AMF3."><img alt="" src="../../_images/sphx_glr_plot_amf3_comparisons_thumb.png" />
 <p><a class="reference internal" href="workflows/plot_amf3_comparisons.html#sphx-glr-source-auto-examples-workflows-plot-amf3-comparisons-py"><span class="std std-ref">Consolidation of Data Sources</span></a></p>
   <div class="sphx-glr-thumbnail-title">Consolidation of Data Sources</div>
@@ -798,13 +817,13 @@ template can be found <a class="reference external" href="https://github.com/ARM
   </nav></div>
 
   <div class="sidebar-secondary-item">
-
-  <div class="tocsection sourcelink">
-    <a href="../../_sources/source/auto_examples/index.rst.txt">
-      <i class="fa-solid fa-file-lines"></i> Show Source
-    </a>
-  </div>
-</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/source/auto_examples/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
 
 </div></div>
               
@@ -819,8 +838,8 @@ template can be found <a class="reference external" href="https://github.com/ARM
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -853,7 +872,8 @@ template can be found <a class="reference external" href="https://github.com/ARM
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>
